@@ -11,7 +11,7 @@ const services = [
     ),
     title: "Gestión Ambiental",
     description:
-      "Administración integral de procesos ambientales para garantizar el cumplimiento normativo y la sustentabilidad de sus proyectos.",
+      "Larga trayectoria en la gestión de trámites y asuntos ambientales federales, estatales y municipales.",
     href: "/servicios/gestion-ambiental",
   },
   {
@@ -23,7 +23,7 @@ const services = [
     ),
     title: "Supervisión Ambiental",
     description:
-      "Monitoreo y vigilancia continua para asegurar que sus operaciones cumplan con los estándares ambientales vigentes.",
+      "Te acompañamos en cada etapa de tu proyecto, desde la planeación hasta su desarrollo y vida útil.",
     href: "/servicios/supervision-ambiental",
   },
   {
@@ -32,9 +32,9 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
       </svg>
     ),
-    title: "Estudios y Programas Ambientales",
+    title: "Programas y Estudios Específicos",
     description:
-      "Elaboración de estudios científicos, geográficos y programas ambientales con rigor técnico y metodológico.",
+      "Amplio listado de estudios ambientales solicitados por la autoridad o para trámites específicos.",
     href: "/servicios/estudios-programas",
   },
   {
@@ -45,7 +45,7 @@ const services = [
     ),
     title: "Asesoría Jurídica Ambiental",
     description:
-      "Apoyo legal especializado en legislación ambiental para proteger sus intereses y garantizar el cumplimiento normativo.",
+      "Asesoría requerida en materia ambiental para el cumplimiento de la Legislación Ambiental Vigente.",
     href: "/servicios/asesoria-juridica",
   },
 ];
@@ -82,9 +82,12 @@ export default function Home() {
                 vigente.
               </p>
               <p className="text-text-medium leading-relaxed mb-8">
-                Contamos con un equipo de profesionales altamente capacitados en
-                diversas disciplinas como geología, biología, ingeniería
-                ambiental y derecho ambiental.
+                GEOBIOS está representado por personal profesional altamente
+                capacitado y consciente de la importancia que reviste la
+                conservación de los recursos naturales y el desarrollo de
+                proyectos compatibles y congruentes con los Planes y Programas
+                de Desarrollo en cada Estado, manteniendo un equilibrio con su
+                entorno.
               </p>
               <a href="/nosotros" className="btn-primary">
                 Conocer nuestra historia
@@ -96,9 +99,9 @@ export default function Home() {
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl p-8 text-center border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
+                  className="bg-white rounded-md p-8 text-center border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
                 >
-                  <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-primary mb-2">
+                  <p className="font-[family-name:var(--font-playfair)] text-4xl font-medium uppercase text-primary mb-2">
                     {stat.value}
                   </p>
                   <p className="text-text-medium text-sm">{stat.label}</p>

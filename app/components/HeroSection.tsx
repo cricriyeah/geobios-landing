@@ -32,7 +32,7 @@ export default function HeroSection() {
                         </p>
 
                         {/* Main Title */}
-                        <h1 className="font-[family-name:var(--font-playfair)] text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up opacity-0 delay-200">
+                        <h1 className="font-[family-name:var(--font-playfair)] text-white text-5xl md:text-6xl lg:text-7xl font-medium uppercase leading-tight mb-6 animate-fade-in-up opacity-0 delay-200">
                             Especialistas en{" "}
                             <span className="text-accent">Consultoría Ambiental</span>
                         </h1>
@@ -57,8 +57,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Bottom Gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-bg-warm/70 to-transparent" />
+
 
             {/* Scroll indicator */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">

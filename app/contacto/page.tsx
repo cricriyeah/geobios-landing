@@ -48,7 +48,7 @@ export default function Contacto() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, nombre: e.target.value })
                                             }
-                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-lg text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-sm text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
                                             placeholder="Su nombre"
                                         />
                                     </div>
@@ -63,7 +63,7 @@ export default function Contacto() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, email: e.target.value })
                                             }
-                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-lg text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-sm text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
                                             placeholder="correo@ejemplo.com"
                                         />
                                     </div>
@@ -80,7 +80,7 @@ export default function Contacto() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, telefono: e.target.value })
                                             }
-                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-lg text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-sm text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
                                             placeholder="+52 612 000 0000"
                                         />
                                     </div>
@@ -93,7 +93,7 @@ export default function Contacto() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, servicio: e.target.value })
                                             }
-                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-lg text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all appearance-none"
+                                            className="w-full px-4 py-3 bg-white border border-border-light rounded-sm text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all appearance-none"
                                         >
                                             <option value="">Seleccionar servicio</option>
                                             <option value="gestion">Gestión Ambiental</option>
@@ -119,7 +119,7 @@ export default function Contacto() {
                                         onChange={(e) =>
                                             setFormData({ ...formData, mensaje: e.target.value })
                                         }
-                                        className="w-full px-4 py-3 bg-white border border-border-light rounded-lg text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all resize-none"
+                                        className="w-full px-4 py-3 bg-white border border-border-light rounded-sm text-text-dark focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all resize-none"
                                         placeholder="Describa su consulta o proyecto..."
                                     />
                                 </div>
@@ -140,9 +140,9 @@ export default function Contacto() {
 
                             {/* Contact Cards */}
                             <div className="space-y-6">
-                                <div className="bg-white rounded-2xl p-8 border border-border-light">
+                                <div className="bg-white rounded-md p-8 border border-border-light">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center shrink-0">
+                                        <div className="w-12 h-12 rounded-sm bg-primary/5 flex items-center justify-center shrink-0">
                                             <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                             </svg>
@@ -167,9 +167,9 @@ export default function Contacto() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl p-8 border border-border-light">
+                                <div className="bg-white rounded-md p-8 border border-border-light">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center shrink-0">
+                                        <div className="w-12 h-12 rounded-sm bg-primary/5 flex items-center justify-center shrink-0">
                                             <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                             </svg>
@@ -196,7 +196,7 @@ export default function Contacto() {
                             </div>
 
                             {/* Map placeholder */}
-                            <div className="bg-white rounded-2xl border border-border-light overflow-hidden h-64 flex items-center justify-center">
+                            <div className="bg-white rounded-md border border-border-light overflow-hidden h-64 flex items-center justify-center">
                                 <div className="text-center text-text-light">
                                     <svg className="w-12 h-12 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />

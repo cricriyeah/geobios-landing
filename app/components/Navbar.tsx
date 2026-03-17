@@ -8,7 +8,7 @@ const services = [
     { name: "Gestión Ambiental", href: "/servicios/gestion-ambiental" },
     { name: "Supervisión Ambiental", href: "/servicios/supervision-ambiental" },
     {
-        name: "Estudios y Programas Ambientales",
+        name: "Programas y Estudios Específicos",
         href: "/servicios/estudios-programas",
     },
     { name: "Asesoría Jurídica Ambiental", href: "/servicios/asesoria-juridica" },
@@ -35,15 +35,12 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
                     <Image
-                        src="/geobios-logo.png"
+                        src="/images/logo-geobios.png"
                         alt="GEOBIOS Logo"
-                        width={44}
-                        height={44}
+                        width={188}
+                        height={128}
                         className="group-hover:scale-105 transition-transform duration-300"
                     />
-                    <span className="text-xl font-bold text-white tracking-wide">
-                        GEOBIOS
-                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -86,7 +83,7 @@ export default function Navbar() {
                         </button>
 
                         <div
-                            className={`absolute top-full left-0 mt-2 w-72 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 ${servicesOpen
+                            className={`absolute top-full left-0 mt-2 w-72 rounded-md overflow-hidden shadow-2xl transition-all duration-300 ${servicesOpen
                                 ? "opacity-100 translate-y-0 pointer-events-auto"
                                 : "opacity-0 -translate-y-2 pointer-events-none"
                                 }`}
@@ -110,7 +107,7 @@ export default function Navbar() {
 
                     <Link
                         href="/contacto"
-                        className="ml-4 px-6 py-2.5 text-sm font-semibold bg-accent text-primary rounded-md hover:bg-accent-light transition-all duration-300 tracking-wide uppercase hover:shadow-lg hover:shadow-accent/20"
+                        className="ml-4 px-6 py-2.5 text-sm font-semibold bg-accent text-primary rounded-sm hover:bg-accent-light transition-all duration-300 tracking-wide uppercase hover:shadow-lg hover:shadow-accent/20"
                     >
                         Contáctanos
                     </Link>
@@ -137,18 +134,18 @@ export default function Navbar() {
                 className={`lg:hidden transition-all duration-500 overflow-hidden ${mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                     }`}
             >
-                <div className="glass mx-4 mt-3 rounded-xl p-4 space-y-1">
+                <div className="glass mx-4 mt-3 rounded-md p-4 space-y-1">
                     <Link
                         href="/"
                         onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-lg hover:bg-white/5 transition-colors"
+                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
                     >
                         Inicio
                     </Link>
                     <Link
                         href="/nosotros"
                         onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-lg hover:bg-white/5 transition-colors"
+                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
                     >
                         Nosotros
                     </Link>
@@ -156,7 +153,7 @@ export default function Navbar() {
                     <div>
                         <button
                             onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                            className="w-full flex items-center justify-between px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-lg hover:bg-white/5 transition-colors"
+                            className="w-full flex items-center justify-between px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
                         >
                             Nuestros Servicios
                             <svg
@@ -189,7 +186,7 @@ export default function Navbar() {
                     <Link
                         href="/contacto"
                         onClick={() => setMobileOpen(false)}
-                        className="block mx-4 mt-2 px-4 py-3 text-center bg-accent text-primary font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-accent-light transition-colors"
+                        className="block mx-4 mt-2 px-4 py-3 text-center bg-accent text-primary font-semibold text-sm uppercase tracking-wide rounded-sm hover:bg-accent-light transition-colors"
                     >
                         Contáctanos
                     </Link>

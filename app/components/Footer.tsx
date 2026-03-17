@@ -4,7 +4,7 @@ import Image from "next/image";
 const services = [
     { name: "Gestión Ambiental", href: "/servicios/gestion-ambiental" },
     { name: "Supervisión Ambiental", href: "/servicios/supervision-ambiental" },
-    { name: "Estudios y Programas", href: "/servicios/estudios-programas" },
+    { name: "Programas y Estudios", href: "/servicios/estudios-programas" },
     { name: "Asesoría Jurídica", href: "/servicios/asesoria-juridica" },
 ];
 
@@ -18,10 +18,10 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="flex items-center gap-2 mb-6">
                             <Image
-                                src="/geobios-logo.png"
+                                src="/images/logo-geobios.png"
                                 alt="GEOBIOS Logo"
-                                width={44}
-                                height={44}
+                                width={48}
+                                height={48}
                             />
                             <span className="text-xl font-bold tracking-wide">GEOBIOS</span>
                         </div>

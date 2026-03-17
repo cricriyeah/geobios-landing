@@ -25,7 +25,7 @@ export default function SectionTitle({
             )}
             <div className={`gold-line mb-6 ${centered ? "mx-auto" : ""}`} />
             <h2
-                className={`font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-4 ${light ? "text-white" : "text-text-dark"
+                className={`font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-medium uppercase mb-4 ${light ? "text-white" : "text-text-dark"
                     }`}
             >
                 {title}

@@ -7,7 +7,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
     return (
         <section className="relative h-[40vh] min-h-[320px] flex items-center justify-center overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary" />
+            <div className="absolute inset-0 bg-primary" />
 
             {/* Decorative circles */}
             <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-accent/5 blur-3xl" />
@@ -26,7 +26,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
             {/* Content */}
             <div className="relative z-10 text-center px-6">
                 <div className="gold-line mx-auto mb-6 animate-fade-in" />
-                <h1 className="font-[family-name:var(--font-playfair)] text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up opacity-0 delay-100">
+                <h1 className="font-[family-name:var(--font-playfair)] text-white text-4xl md:text-5xl lg:text-6xl font-medium uppercase mb-4 animate-fade-in-up opacity-0 delay-100">
                     {title}
                 </h1>
                 {subtitle && (
@@ -36,8 +36,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
                 )}
             </div>
 
-            {/* Bottom gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg-warm to-transparent" />
+
         </section>
     );
 }

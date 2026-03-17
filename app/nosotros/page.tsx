@@ -83,26 +83,21 @@ export default function Nosotros() {
                                     vigente.
                                 </p>
                                 <p>
-                                    A lo largo de más de dos décadas, hemos consolidado nuestra
-                                    presencia como referente en consultoría ambiental, brindando
-                                    servicios de alta calidad a empresas, gobiernos e
-                                    instituciones que buscan un desarrollo armónico con el medio
-                                    ambiente.
-                                </p>
-                                <p>
-                                    Nuestro enfoque integral nos permite abordar cada proyecto
-                                    desde múltiples perspectivas, garantizando soluciones
-                                    completas y efectivas que cumplen con los más altos estándares
-                                    nacionales e internacionales.
+                                    GEOBIOS está representado por personal profesional altamente
+                                    capacitado y consciente de la importancia que reviste la
+                                    conservación de los recursos naturales y el desarrollo de
+                                    proyectos compatibles y congruentes con los Planes y Programas
+                                    de Desarrollo en cada Estado, manteniendo un equilibrio con su
+                                    entorno.
                                 </p>
                             </div>
                         </div>
 
                         <div className="space-y-8">
                             {/* Mission */}
-                            <div className="bg-white rounded-2xl p-8 border border-border-light">
+                            <div className="bg-white rounded-md p-8 border border-border-light">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center">
                                         <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
                                         </svg>
@@ -110,17 +105,16 @@ export default function Nosotros() {
                                     <h3 className="text-lg font-bold text-text-dark">Misión</h3>
                                 </div>
                                 <p className="text-text-medium text-sm leading-relaxed">
-                                    Contribuir al desarrollo sustentable mediante la prestación de
-                                    servicios de consultoría ambiental de excelencia, garantizando
-                                    el cumplimiento de la legislación vigente y promoviendo la
-                                    conservación de los recursos naturales.
+                                    Proporcionar el óptimo de la utilidad del proyecto y la
+                                    utilización del capital natural, conforme a la legislación
+                                    vigente dentro de un enfoque multicriterio.
                                 </p>
                             </div>
 
                             {/* Vision */}
-                            <div className="bg-white rounded-2xl p-8 border border-border-light">
+                            <div className="bg-white rounded-md p-8 border border-border-light">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-sm bg-accent/10 flex items-center justify-center">
                                         <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -129,10 +123,11 @@ export default function Nosotros() {
                                     <h3 className="text-lg font-bold text-text-dark">Visión</h3>
                                 </div>
                                 <p className="text-text-medium text-sm leading-relaxed">
-                                    Ser reconocidos como la consultoría ambiental líder a nivel
-                                    nacional, destacando por nuestra excelencia técnica, compromiso
-                                    ético y contribución efectiva a la protección del medio
-                                    ambiente.
+                                    Ser una empresa que utiliza los conocimientos científicos y
+                                    tecnología de vanguardia para aportar elementos para la toma
+                                    de decisiones en la gestión de la sustentabilidad. Para
+                                    alcanzar esta visión, asumimos compromisos con calidad y
+                                    espíritu de servicio.
                                 </p>
                             </div>
                         </div>
@@ -153,9 +148,9 @@ export default function Nosotros() {
                         {values.map((value, i) => (
                             <div
                                 key={i}
-                                className="text-center p-8 rounded-2xl bg-bg-warm border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg group"
+                                className="text-center p-8 rounded-md bg-bg-warm border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg group"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/10 transition-colors text-primary group-hover:text-accent">
+                                <div className="w-16 h-16 rounded-sm bg-primary/5 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/10 transition-colors text-primary group-hover:text-accent">
                                     {value.icon}
                                 </div>
                                 <h3 className="text-text-dark font-bold text-lg mb-3">
@@ -183,9 +178,9 @@ export default function Nosotros() {
                         {team.map((member, i) => (
                             <div
                                 key={i}
-                                className="bg-white rounded-2xl p-8 border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
+                                className="bg-white rounded-md p-8 border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
                             >
-                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                                <div className="w-16 h-16 rounded-md bg-primary/10 flex items-center justify-center mb-6">
                                     <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                     </svg>
