@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0d0b52;
+  --primary: #121139;
   --primary-light: #1a1766;
   --primary-lighter: #2d2980;
   --primary-pale: #c4c2e0;
-  --accent: #C7B99B;
+  --accent: #e2c179;
   --accent-light: #DDD1BC;
   --bg-warm: #F9FAFB;
   --bg-white: #FFFFFF;
@@ -182,7 +182,7 @@ body {
 
 /* Video overlay */
 .video-overlay {
-  background: rgba(13, 11, 82, 0.55);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Hero overlay for internal pages */
@@ -214,32 +214,35 @@ body {
   color: white;
   font-weight: 600;
   padding: 14px 36px;
-  border-radius: 4px;
+  border-radius: 0;
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none;
   letter-spacing: 0.5px;
+  border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
+  background: var(--primary-light);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(13, 11, 82, 0.4);
 }
 
-.btn-outline {
-  border: 2px solid var(--accent);
-  color: white;
+.btn-accent {
+  background: var(--accent);
+  color: var(--primary);
   font-weight: 600;
-  padding: 12px 34px;
-  border-radius: 4px;
+  padding: 14px 36px;
+  border-radius: 0;
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none;
   letter-spacing: 0.5px;
+  border: 1px solid var(--accent);
 }
 
-.btn-outline:hover {
-  background: var(--accent);
-  color: var(--primary);
+.btn-accent:hover {
+  background: #f1d592;
   transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(199, 185, 155, 0.3);
 }

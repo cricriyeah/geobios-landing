@@ -1,0 +1,268 @@
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.bgWarm {
+  background-color: var(--bg-warm);
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.intro {
+  max-width: 48rem;
+  margin-bottom: 4rem;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--text-medium);
+  line-height: 1.625;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0;
+  padding: 2rem;
+  border: 1px solid var(--border-light);
+  height: 100%;
+}
+
+.cardCentered {
+  text-align: center;
+}
+
+.cardInteractive {
+  transition: all 0.3s ease;
+}
+
+.cardInteractive:hover {
+  border-color: rgba(199, 185, 155, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardHeaderCentered {
+  justify-content: center;
+}
+
+.iconWrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0;
+  background-color: rgba(13, 11, 82, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconWrapperLg {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.iconWrapperCentered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary);
+}
+
+.iconLg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.cardDescription {
+  color: var(--text-medium);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--bg-warm);
+  border-radius: 0;
+}
+
+.listItemWhite {
+  background-color: white;
+  border: 1px solid var(--border-light);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.listItemWhite:hover {
+  border-color: rgba(199, 185, 155, 0.3);
+}
+
+.checkIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.listText {
+  color: var(--text-medium);
+  font-size: 0.875rem;
+}
+
+.footerCta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.banner {
+  margin-top: 4rem;
+  background-color: var(--primary);
+  border-radius: 0;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.bannerTitle {
+  font-family: var(--font-playfair), serif;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.bannerText {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaSection {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--primary);
+  overflow: hidden;
+  width: 100%;
+}
+
+.ctaCircle1 {
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 9999px;
+  background: rgba(199, 185, 155, 0.03);
+  filter: blur(80px);
+}
+
+.ctaCircle2 {
+  position: absolute;
+  bottom: -10rem;
+  left: -10rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 9999px;
+  background: rgba(45, 41, 128, 0.2);
+  filter: blur(60px);
+}
+
+.ctaSectionContent {
+  position: relative;
+  z-index: 10;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-playfair), serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 3rem;
+  }
+}
+
+.ctaText {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}

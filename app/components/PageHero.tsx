@@ -1,3 +1,5 @@
+import styles from "./PageHero.module.css";
+
 interface PageHeroProps {
     title: string;
     subtitle?: string;
@@ -5,38 +7,29 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle }: PageHeroProps) {
     return (
-        <section className="relative h-[40vh] min-h-[320px] flex items-center justify-center overflow-hidden">
+        <section className={styles.hero}>
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-primary" />
+            <div className={styles.bg} />
 
             {/* Decorative circles */}
-            <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-accent/5 blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-primary-lighter/20 blur-2xl" />
+            <div className={styles.circle1} />
+            <div className={styles.circle2} />
 
             {/* Grid pattern overlay */}
-            <div
-                className="absolute inset-0 opacity-5"
-                style={{
-                    backgroundImage:
-                        "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-                    backgroundSize: "60px 60px",
-                }}
-            />
+            <div className={styles.gridOverlay} />
 
             {/* Content */}
-            <div className="relative z-10 text-center px-6">
-                <div className="gold-line mx-auto mb-6 animate-fade-in" />
-                <h1 className="font-[family-name:var(--font-playfair)] text-white text-4xl md:text-5xl lg:text-6xl font-medium uppercase mb-4 animate-fade-in-up opacity-0 delay-100">
+            <div className={styles.content}>
+                <div className={`${styles.goldLine} ${styles.animated} ${styles.fadeIn}`} />
+                <h1 className={`${styles.title} ${styles.animated} ${styles.fadeInUp} ${styles.delay100}`}>
                     {title}
                 </h1>
                 {subtitle && (
-                    <p className="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up opacity-0 delay-200">
+                    <p className={`${styles.subtitle} ${styles.animated} ${styles.fadeInUp} ${styles.delay200}`}>
                         {subtitle}
                     </p>
                 )}
             </div>
-
-
         </section>
     );
 }

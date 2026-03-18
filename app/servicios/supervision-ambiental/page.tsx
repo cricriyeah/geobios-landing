@@ -1,5 +1,6 @@
 import PageHero from "../../components/PageHero";
 import SectionTitle from "../../components/SectionTitle";
+import styles from "../ServiceDetail.module.css";
 
 const services = [
     {
@@ -43,45 +44,51 @@ export default function SupervisionAmbiental() {
                 subtitle="Monitoreo y vigilancia continua para el cumplimiento ambiental"
             />
 
-            <section className="py-24 bg-bg-warm">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <section className={`${styles.section} ${styles.bgWarm}`}>
+                <div className={styles.container}>
                     <SectionTitle
                         label="Nuestro servicio"
                         title="Supervisión Ambiental"
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                    <div className={`${styles.grid} ${styles.grid3} mt-8`}>
                         {services.map((service, i) => (
                             <div
                                 key={i}
-                                className="bg-white rounded-md p-8 border border-border-light text-center hover:border-accent/30 transition-all duration-300 hover:shadow-lg group"
+                                className={`${styles.card} ${styles.cardCentered} ${styles.cardInteractive}`}
                             >
-                                <div className="w-16 h-16 rounded-sm bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary group-hover:bg-accent/10 group-hover:text-accent transition-colors">
-                                    {service.icon}
+                                <div className={`${styles.iconWrapper} ${styles.iconWrapperLg} ${styles.iconWrapperCentered}`}>
+                                    <div className={styles.iconLg}>
+                                        {service.icon}
+                                    </div>
                                 </div>
-                                <h3 className="text-text-dark font-bold text-lg mb-4">
+                                <h3 className={styles.cardTitle}>
                                     {service.title}
                                 </h3>
-                                <p className="text-text-medium text-sm leading-relaxed">
+                                <p className={styles.cardDescription}>
                                     {service.description}
                                 </p>
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    {/* CTA Banner */}
-                    <div className="mt-16 bg-primary rounded-md p-10 text-center">
-                        <h3 className="font-[family-name:var(--font-playfair)] text-white text-2xl font-medium uppercase mb-3">
-                            ¡Pregunta por nuestros planes y beneficios!
-                        </h3>
-                        <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-                            Garantice el cumplimiento ambiental de sus proyectos con nuestro
-                            equipo de supervisores certificados.
-                        </p>
-                        <a href="/contacto" className="btn-primary">
-                            Contactar ahora
-                        </a>
-                    </div>
+            {/* CTA */}
+            <section className={styles.ctaSection}>
+                <div className={styles.ctaCircle1} />
+                <div className={styles.ctaCircle2} />
+                <div className={styles.ctaSectionContent}>
+                    <h2 className={styles.ctaTitle}>
+                        ¡Pregunta por nuestros planes y beneficios!
+                    </h2>
+                    <p className={styles.ctaText}>
+                        Garantice el cumplimiento ambiental de sus proyectos con nuestro
+                        equipo de supervisores certificados.
+                    </p>
+                    <a href="/contacto" className="btn-accent">
+                        Contactar ahora
+                    </a>
                 </div>
             </section>
         </>

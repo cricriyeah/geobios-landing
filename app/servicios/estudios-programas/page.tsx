@@ -1,5 +1,6 @@
 import PageHero from "../../components/PageHero";
 import SectionTitle from "../../components/SectionTitle";
+import styles from "../ServiceDetail.module.css";
 
 const categories = [
     {
@@ -49,44 +50,44 @@ export default function EstudiosProgramas() {
                 subtitle="Estudios ambientales solicitados por la autoridad o para trámites específicos"
             />
 
-            <section className="py-24 bg-bg-warm">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="max-w-3xl mb-16">
+            <section className={`${styles.section} ${styles.bgWarm}`}>
+                <div className={styles.container}>
+                    <div className={styles.intro}>
                         <SectionTitle
                             label="Nuestro servicio"
                             title="Programas y Estudios Ambientales Específicos"
                             centered={false}
                         />
-                        <p className="text-text-medium leading-relaxed">
+                        <p className={styles.cardDescription}>
                             Contamos con un amplio listado de estudios ambientales que
                             pueden ser solicitados por la autoridad o algún trámite específico.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className={styles.grid}>
                         {categories.map((category, i) => (
                             <div
                                 key={i}
-                                className="bg-white rounded-md p-8 border border-border-light"
+                                className={styles.card}
                             >
-                                <h3 className="text-lg font-bold text-text-dark mb-6 flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                <h3 className={styles.cardHeader}>
+                                    <div className={styles.iconWrapper}>
+                                        <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                                         </svg>
                                     </div>
-                                    {category.title}
+                                    <span className={styles.cardTitle}>{category.title}</span>
                                 </h3>
-                                <div className="space-y-3">
+                                <div className={styles.list}>
                                     {category.items.map((item, j) => (
                                         <div
                                             key={j}
-                                            className="flex items-start gap-3 p-3 bg-bg-warm rounded-sm"
+                                            className={styles.listItem}
                                         >
-                                            <svg className="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <svg className={styles.checkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
-                                            <span className="text-text-medium text-sm">{item}</span>
+                                            <span className={styles.listText}>{item}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -94,18 +95,25 @@ export default function EstudiosProgramas() {
                         ))}
                     </div>
 
-                    {/* Academic link callout */}
-                    <div className="mt-12 bg-primary rounded-md p-10 text-center">
-                        <h3 className="font-[family-name:var(--font-playfair)] text-white text-2xl font-medium uppercase mb-3">
-                            En GEOBIOS mantenemos un vínculo con instituciones académicas y de investigación
-                        </h3>
-                        <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-                            Para enriquecer nuestros estudios con opiniones científicas.
-                        </p>
-                        <a href="/contacto" className="btn-primary">
-                            Contactar ahora
-                        </a>
                     </div>
+            </section>
+
+            {/* CTA */}
+            <section className={styles.ctaSection}>
+                <div className={styles.ctaCircle1} />
+                <div className={styles.ctaCircle2} />
+                <div className={styles.ctaSectionContent}>
+                    <h2 className={styles.ctaTitle}>
+                        Vínculo con instituciones académicas
+                    </h2>
+                    <p className={styles.ctaText}>
+                        En GEOBIOS mantenemos un estrecho vínculo con instituciones
+                        académicas y de investigación para enriquecer nuestros estudios con
+                        opiniones científicas de vanguardia.
+                    </p>
+                    <a href="/contacto" className="btn-accent">
+                        Contactar ahora
+                    </a>
                 </div>
             </section>
         </>

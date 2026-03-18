@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import SectionTitle from "./components/SectionTitle";
 import ServiceCard from "./components/ServiceCard";
+import styles from "./page.module.css";
 
 const services = [
   {
@@ -64,16 +65,16 @@ export default function Home() {
       <HeroSection />
 
       {/* About Preview */}
-      <section className="py-24 bg-bg-warm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className={`${styles.section} ${styles.bgWarm}`}>
+        <div className={styles.container}>
+          <div className={styles.aboutGrid}>
             <div>
               <SectionTitle
                 label="Sobre nosotros"
                 title="¿Quiénes Somos?"
                 centered={false}
               />
-              <p className="text-text-medium leading-relaxed mb-6">
+              <p className={`${styles.textMedium} ${styles.mb6}`}>
                 Consultoría Ambiental GEOBIOS es una empresa fundada en el año
                 2000 por un grupo multidisciplinario de profesionistas
                 preocupados por el desarrollo de los Estados, la conservación
@@ -81,7 +82,7 @@ export default function Home() {
                 naturales, mediante el cumplimiento de la legislación ambiental
                 vigente.
               </p>
-              <p className="text-text-medium leading-relaxed mb-8">
+              <p className={`${styles.textMedium} ${styles.mb8}`}>
                 GEOBIOS está representado por personal profesional altamente
                 capacitado y consciente de la importancia que reviste la
                 conservación de los recursos naturales y el desarrollo de
@@ -89,22 +90,22 @@ export default function Home() {
                 de Desarrollo en cada Estado, manteniendo un equilibrio con su
                 entorno.
               </p>
-              <a href="/nosotros" className="btn-primary">
+              <a href="/nosotros" className={styles.btnPrimary}>
                 Conocer nuestra historia
               </a>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className={styles.statsGrid}>
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-md p-8 text-center border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
+                  className={styles.statCard}
                 >
-                  <p className="font-[family-name:var(--font-playfair)] text-4xl font-medium uppercase text-primary mb-2">
+                  <p className={styles.statValue}>
                     {stat.value}
                   </p>
-                  <p className="text-text-medium text-sm">{stat.label}</p>
+                  <p className={styles.statLabel}>{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -113,15 +114,15 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className={`${styles.section} ${styles.bgWhite}`}>
+        <div className={styles.container}>
           <SectionTitle
             label="Lo que hacemos"
             title="Nuestros Servicios"
             description="Ofrecemos soluciones integrales en materia ambiental, adaptadas a las necesidades específicas de cada proyecto."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+          <div className={styles.servicesGrid}>
             {services.map((service, i) => (
               <ServiceCard key={i} {...service} />
             ))}
@@ -130,24 +131,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className={styles.ctaSection}>
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-primary-lighter/20 blur-3xl" />
+        <div className={styles.ctaCircle1} />
+        <div className={styles.ctaCircle2} />
 
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className={styles.ctaContent}>
           <SectionTitle
             label="¿Necesita asesoría?"
             title="Contáctenos para una consulta personalizada"
             description="Nuestro equipo de expertos está listo para ayudarle a encontrar la mejor solución para sus necesidades ambientales."
             light
           />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="/contacto" className="btn-primary text-center">
+          <div className={styles.ctaButtons}>
+            <a href="/contacto" className={styles.btnAccent}>
               Solicitar Consultoría
-            </a>
-            <a href="tel:+526121402861" className="btn-outline text-center">
-              Llamar ahora
             </a>
           </div>
         </div>

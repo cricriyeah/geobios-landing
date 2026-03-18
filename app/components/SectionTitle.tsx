@@ -1,3 +1,5 @@
+import styles from "./SectionTitle.module.css";
+
 interface SectionTitleProps {
     label?: string;
     title: string;
@@ -14,26 +16,23 @@ export default function SectionTitle({
     light = false,
 }: SectionTitleProps) {
     return (
-        <div className={`mb-12 ${centered ? "text-center" : ""}`}>
+        <div className={`${styles.wrapper} ${centered ? styles.centered : ""}`}>
             {label && (
                 <p
-                    className={`text-sm font-semibold uppercase tracking-[0.2em] mb-3 ${light ? "text-accent-light" : "text-accent"
-                        }`}
+                    className={`${styles.label} ${light ? styles.labelLight : ""}`}
                 >
                     {label}
                 </p>
             )}
-            <div className={`gold-line mb-6 ${centered ? "mx-auto" : ""}`} />
+            <div className={`${styles.goldLine} ${centered ? styles.goldLineCentered : ""}`} />
             <h2
-                className={`font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-medium uppercase mb-4 ${light ? "text-white" : "text-text-dark"
-                    }`}
+                className={`${styles.title} ${light ? styles.titleLight : ""}`}
             >
                 {title}
             </h2>
             {description && (
                 <p
-                    className={`text-lg max-w-2xl leading-relaxed ${centered ? "mx-auto" : ""
-                        } ${light ? "text-white/70" : "text-text-medium"}`}
+                    className={`${styles.description} ${centered ? styles.descriptionCentered : ""} ${light ? styles.descriptionLight : ""}`}
                 >
                     {description}
                 </p>

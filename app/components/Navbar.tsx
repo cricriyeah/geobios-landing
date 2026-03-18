@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import styles from "./Navbar.module.css";
 
 const services = [
     { name: "Gestión Ambiental", href: "/servicios/gestion-ambiental" },
@@ -28,47 +29,45 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "glass shadow-lg py-3" : "bg-transparent py-5"
-                }`}
+            className={`${styles.header} ${scrolled ? styles.scrolled : styles.transparent}`}
         >
-            <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <nav className={styles.nav}>
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 group">
+                <Link href="/" className={styles.logoLink}>
                     <Image
-                        src="/images/logo-geobios.png"
+                        src="/images/logoblanco1grande.png"
                         alt="GEOBIOS Logo"
-                        width={188}
-                        height={128}
-                        className="group-hover:scale-105 transition-transform duration-300"
+                        width={124}
+                        height={84}
+                        className={styles.logo}
                     />
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex items-center gap-1">
+                <div className={styles.desktopNav}>
                     <Link
                         href="/"
-                        className="px-4 py-2 text-sm font-medium text-white/90 hover:text-accent transition-colors duration-300 tracking-wide uppercase"
+                        className={styles.navLink}
                     >
                         Inicio
                     </Link>
                     <Link
                         href="/nosotros"
-                        className="px-4 py-2 text-sm font-medium text-white/90 hover:text-accent transition-colors duration-300 tracking-wide uppercase"
+                        className={styles.navLink}
                     >
                         Nosotros
                     </Link>
 
                     {/* Services Dropdown */}
                     <div
-                        className="relative"
+                        className={styles.dropdownContainer}
                         onMouseEnter={() => setServicesOpen(true)}
                         onMouseLeave={() => setServicesOpen(false)}
                     >
-                        <button className="px-4 py-2 text-sm font-medium text-white/90 hover:text-accent transition-colors duration-300 tracking-wide uppercase flex items-center gap-1">
+                        <button className={styles.dropdownButton}>
                             Nuestros Servicios
                             <svg
-                                className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""
-                                    }`}
+                                className={`${styles.chevron} ${servicesOpen ? styles.chevronRotated : ""}`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -83,20 +82,17 @@ export default function Navbar() {
                         </button>
 
                         <div
-                            className={`absolute top-full left-0 mt-2 w-72 rounded-md overflow-hidden shadow-2xl transition-all duration-300 ${servicesOpen
-                                ? "opacity-100 translate-y-0 pointer-events-auto"
-                                : "opacity-0 -translate-y-2 pointer-events-none"
-                                }`}
+                            className={`${styles.dropdownMenu} ${servicesOpen ? styles.dropdownVisible : styles.dropdownHidden}`}
                         >
-                            <div className="glass-white border border-border-light">
+                            <div className={styles.dropdownContent}>
                                 {services.map((service, i) => (
                                     <Link
                                         key={i}
                                         href={service.href}
-                                        className="block px-5 py-3.5 text-sm text-text-dark hover:bg-primary-pale/30 hover:text-primary transition-colors duration-200 border-b border-border-light/50 last:border-0"
+                                        className={styles.dropdownItem}
                                     >
-                                        <span className="flex items-center gap-3">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                        <span className={styles.itemWrapper}>
+                                            <span className={styles.dot} />
                                             {service.name}
                                         </span>
                                     </Link>
@@ -107,7 +103,7 @@ export default function Navbar() {
 
                     <Link
                         href="/contacto"
-                        className="ml-4 px-6 py-2.5 text-sm font-semibold bg-accent text-primary rounded-sm hover:bg-accent-light transition-all duration-300 tracking-wide uppercase hover:shadow-lg hover:shadow-accent/20"
+                        className={styles.contactBtn}
                     >
                         Contáctanos
                     </Link>
@@ -116,7 +112,7 @@ export default function Navbar() {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="lg:hidden text-white p-2"
+                    className={styles.mobileBtn}
                     aria-label="Abrir menú"
                 >
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,21 +127,20 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <div
-                className={`lg:hidden transition-all duration-500 overflow-hidden ${mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : styles.mobileMenuClosed}`}
             >
-                <div className="glass mx-4 mt-3 rounded-md p-4 space-y-1">
+                <div className={styles.mobileMenuContent}>
                     <Link
                         href="/"
                         onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
+                        className={styles.mobileNavLink}
                     >
                         Inicio
                     </Link>
                     <Link
                         href="/nosotros"
                         onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
+                        className={styles.mobileNavLink}
                     >
                         Nosotros
                     </Link>
@@ -153,12 +148,11 @@ export default function Navbar() {
                     <div>
                         <button
                             onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                            className="w-full flex items-center justify-between px-4 py-3 text-white/90 hover:text-accent text-sm font-medium uppercase tracking-wide rounded-sm hover:bg-white/5 transition-colors"
+                            className={styles.mobileDropdownBtn}
                         >
                             Nuestros Servicios
                             <svg
-                                className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""
-                                    }`}
+                                className={`${styles.chevron} ${mobileServicesOpen ? styles.chevronRotated : ""}`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -167,15 +161,14 @@ export default function Navbar() {
                             </svg>
                         </button>
                         <div
-                            className={`transition-all duration-300 overflow-hidden ${mobileServicesOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-                                }`}
+                            className={`${styles.mobileSubMenu} ${mobileServicesOpen ? styles.mobileSubMenuOpen : styles.mobileSubMenuClosed}`}
                         >
                             {services.map((service, i) => (
                                 <Link
                                     key={i}
                                     href={service.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className="block pl-8 pr-4 py-2.5 text-white/70 hover:text-accent text-sm transition-colors"
+                                    className={styles.mobileSubLink}
                                 >
                                     {service.name}
                                 </Link>
@@ -186,7 +179,7 @@ export default function Navbar() {
                     <Link
                         href="/contacto"
                         onClick={() => setMobileOpen(false)}
-                        className="block mx-4 mt-2 px-4 py-3 text-center bg-accent text-primary font-semibold text-sm uppercase tracking-wide rounded-sm hover:bg-accent-light transition-colors"
+                        className={styles.mobileContactBtn}
                     >
                         Contáctanos
                     </Link>

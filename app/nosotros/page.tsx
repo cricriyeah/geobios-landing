@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import SectionTitle from "../components/SectionTitle";
+import styles from "./nosotros.module.css";
 
 const team = [
     {
@@ -64,16 +65,16 @@ export default function Nosotros() {
             />
 
             {/* About */}
-            <section className="py-24 bg-bg-warm">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <section className={`${styles.section} ${styles.bgWarm}`}>
+                <div className={styles.container}>
+                    <div className={styles.grid}>
                         <div>
                             <SectionTitle
                                 label="Nuestra historia"
                                 title="¿Quiénes Somos?"
                                 centered={false}
                             />
-                            <div className="space-y-5 text-text-medium leading-relaxed">
+                            <div className={styles.textBlock}>
                                 <p>
                                     Consultoría Ambiental GEOBIOS es una empresa fundada en el año
                                     2000 por un grupo multidisciplinario de profesionistas
@@ -93,18 +94,18 @@ export default function Nosotros() {
                             </div>
                         </div>
 
-                        <div className="space-y-8">
+                        <div className={styles.columnStack}>
                             {/* Mission */}
-                            <div className="bg-white rounded-md p-8 border border-border-light">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                            <div className={styles.card}>
+                                <div className={styles.cardHeader}>
+                                    <div className={`${styles.iconWrapper} ${styles.bgPrimary10}`}>
+                                        <svg className={`w-5 h-5 ${styles.textPrimary}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-lg font-bold text-text-dark">Misión</h3>
+                                    <h3 className={styles.cardTitle}>Misión</h3>
                                 </div>
-                                <p className="text-text-medium text-sm leading-relaxed">
+                                <p className={styles.cardText}>
                                     Proporcionar el óptimo de la utilidad del proyecto y la
                                     utilización del capital natural, conforme a la legislación
                                     vigente dentro de un enfoque multicriterio.
@@ -112,17 +113,17 @@ export default function Nosotros() {
                             </div>
 
                             {/* Vision */}
-                            <div className="bg-white rounded-md p-8 border border-border-light">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 rounded-sm bg-accent/10 flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                            <div className={styles.card}>
+                                <div className={styles.cardHeader}>
+                                    <div className={`${styles.iconWrapper} ${styles.bgAccent10}`}>
+                                        <svg className={`w-5 h-5 ${styles.textAccent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-lg font-bold text-text-dark">Visión</h3>
+                                    <h3 className={styles.cardTitle}>Visión</h3>
                                 </div>
-                                <p className="text-text-medium text-sm leading-relaxed">
+                                <p className={styles.cardText}>
                                     Ser una empresa que utiliza los conocimientos científicos y
                                     tecnología de vanguardia para aportar elementos para la toma
                                     de decisiones en la gestión de la sustentabilidad. Para
@@ -136,27 +137,27 @@ export default function Nosotros() {
             </section>
 
             {/* Values */}
-            <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <section className={`${styles.section} ${styles.bgWhite}`}>
+                <div className={styles.container}>
                     <SectionTitle
                         label="Lo que nos define"
                         title="Nuestros Valores"
                         description="Los principios que guían cada una de nuestras acciones y decisiones."
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                    <div className={styles.valuesGrid}>
                         {values.map((value, i) => (
                             <div
                                 key={i}
-                                className="text-center p-8 rounded-md bg-bg-warm border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg group"
+                                className={styles.valueCard}
                             >
-                                <div className="w-16 h-16 rounded-sm bg-primary/5 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/10 transition-colors text-primary group-hover:text-accent">
+                                <div className={styles.valueIconWrapper}>
                                     {value.icon}
                                 </div>
-                                <h3 className="text-text-dark font-bold text-lg mb-3">
+                                <h3 className={styles.valueTitle}>
                                     {value.title}
                                 </h3>
-                                <p className="text-text-medium text-sm leading-relaxed">
+                                <p className={styles.cardText}>
                                     {value.description}
                                 </p>
                             </div>
@@ -166,37 +167,55 @@ export default function Nosotros() {
             </section>
 
             {/* Team */}
-            <section className="py-24 bg-bg-warm">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <section className={`${styles.section} ${styles.bgWarm}`}>
+                <div className={styles.container}>
                     <SectionTitle
                         label="Nuestro equipo"
                         title="Equipo Directivo"
                         description="Profesionales con amplia trayectoria y compromiso con la excelencia ambiental."
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+                    <div className={styles.teamGrid}>
                         {team.map((member, i) => (
                             <div
                                 key={i}
-                                className="bg-white rounded-md p-8 border border-border-light hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
+                                className={styles.teamCard}
                             >
-                                <div className="w-16 h-16 rounded-md bg-primary/10 flex items-center justify-center mb-6">
-                                    <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                <div className={styles.teamIconWrapper}>
+                                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-text-dark font-bold text-lg mb-1">
+                                <h3 className={styles.teamName}>
                                     {member.name}
                                 </h3>
-                                <p className="text-accent font-semibold text-sm mb-4">
+                                <p className={styles.teamRole}>
                                     {member.role}
                                 </p>
-                                <p className="text-text-medium text-sm leading-relaxed">
+                                <p className={styles.cardText}>
                                     {member.description}
                                 </p>
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className={styles.ctaSection}>
+                <div className={styles.ctaCircle1} />
+                <div className={styles.ctaCircle2} />
+                <div className={styles.ctaContent}>
+                    <h2 className={styles.ctaTitle}>
+                        ¿Listo para iniciar su proyecto?
+                    </h2>
+                    <p className={styles.ctaText}>
+                        Contáctenos hoy mismo y descubra cómo podemos ayudarle a cumplir
+                        con sus metas ambientales de manera sustentable y legal.
+                    </p>
+                    <a href="/contacto" className="btn-accent">
+                        Contactar ahora
+                    </a>
                 </div>
             </section>
         </>
