@@ -1,5 +1,8 @@
+"use client";
+
+import FadeIn from "../../components/FadeIn";
 import PageHero from "../../components/PageHero";
-import SectionTitle from "../../components/SectionTitle";
+import ImageCarousel from "../../components/ImageCarousel";
 import styles from "../ServiceDetail.module.css";
 
 const categories = [
@@ -42,80 +45,119 @@ const categories = [
     },
 ];
 
+const floraPhotos = [
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230703_061014.jpg", alt: "Rescate de flora en campo" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230703_105308.jpg", alt: "Identificación de especies vegetales" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20240122_134052.jpg", alt: "Reubicación de flora silvestre" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20240309_103640.jpg", alt: "Trabajo de campo rescate flora" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20230724_121532.jpg", alt: "Documentación de especies rescatadas" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230704_150841.jpg", alt: "Proceso de rescate de vegetación" },
+];
+
+const faunaPhotos = [
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG_20210406_083134600.jpg", alt: "Rescate de fauna silvestre" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/Original_TimePhoto_20210407_100644.jpg", alt: "Manejo de fauna en campo" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG_20240311_105517.jpg", alt: "Reubicación de especies animales" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/TimePhoto_20230710_122357.jpg", alt: "Documentación de fauna rescatada" },
+    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG-20240615-WA0004.jpg", alt: "Liberación de fauna silvestre" },
+];
+
+const levantamientosPhotos = [
+    { src: "/images/fotos-geo/Levantamientos/IMG_20220112_100949264_HDR.jpg", alt: "Levantamiento topográfico en campo" },
+    { src: "/images/fotos-geo/Levantamientos/IMG_20220112_120256557.jpg", alt: "Mediciones en sitio de proyecto" },
+    { src: "/images/fotos-geo/Levantamientos/IMG_20220210_112817534_HDR.jpg", alt: "Trabajo de levantamiento ambiental" },
+    { src: "/images/fotos-geo/Levantamientos/PXL_20220602_143130730.jpg", alt: "Equipo realizando levantamientos" },
+    { src: "/images/fotos-geo/Levantamientos/IMG_20231016_095559.jpg", alt: "Levantamiento de datos en campo" },
+];
+
 export default function EstudiosProgramas() {
     return (
         <>
             <PageHero
                 title="Programas y Estudios Específicos"
-                subtitle="Estudios ambientales solicitados por la autoridad o para trámites específicos"
+                subtitle="Soluciones técnicas y especializadas para el cumplimiento legal"
             />
 
             <section className={`${styles.section} ${styles.bgWarm}`}>
                 <div className={styles.container}>
-                    <div className={styles.intro}>
-                        <SectionTitle
-                            label="Nuestro servicio"
-                            title="Programas y Estudios Ambientales Específicos"
-                            centered={false}
-                        />
-                        <p className={styles.cardDescription}>
-                            Contamos con un amplio listado de estudios ambientales que
-                            pueden ser solicitados por la autoridad o algún trámite específico.
-                        </p>
-                    </div>
-
                     <div className={styles.grid}>
                         {categories.map((category, i) => (
-                            <div
-                                key={i}
-                                className={styles.card}
-                            >
-                                <h3 className={styles.cardHeader}>
-                                    <div className={styles.iconWrapper}>
-                                        <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                                        </svg>
+                            <FadeIn key={i} direction="up" delay={i * 0.1}>
+                                <div className={styles.card}>
+                                    <h3 className={styles.categoryTitle}>
+                                        <span className={styles.categoryNumber}>{String(i + 1).padStart(2, '0')}</span>
+                                        {category.title}
+                                    </h3>
+                                    <div className={styles.list}>
+                                        {category.items.map((item, j) => (
+                                            <div
+                                                key={j}
+                                                className={styles.listItem}
+                                            >
+                                                <svg className={styles.checkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span className={styles.listText}>{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <span className={styles.cardTitle}>{category.title}</span>
-                                </h3>
-                                <div className={styles.list}>
-                                    {category.items.map((item, j) => (
-                                        <div
-                                            key={j}
-                                            className={styles.listItem}
-                                        >
-                                            <svg className={styles.checkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                            <span className={styles.listText}>{item}</span>
-                                        </div>
-                                    ))}
                                 </div>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
 
-                    </div>
+                    <FadeIn direction="up">
+                        <div className={styles.carouselSection}>
+                            <ImageCarousel
+                                title="Rescate y Reubicación de Flora"
+                                description="Documentación fotográfica de nuestros programas de rescate y reubicación de especies vegetales."
+                                images={floraPhotos}
+                            />
+                        </div>
+                    </FadeIn>
+
+                    <FadeIn direction="up">
+                        <div className={styles.carouselSection}>
+                            <ImageCarousel
+                                title="Rescate y Reubicación de Fauna"
+                                description="Evidencia de nuestro trabajo de rescate, manejo y reubicación de fauna silvestre."
+                                images={faunaPhotos}
+                            />
+                        </div>
+                    </FadeIn>
+
+                    <FadeIn direction="up">
+                        <div className={styles.carouselSection}>
+                            <ImageCarousel
+                                title="Levantamientos de Campo"
+                                description="Registro de nuestros levantamientos topográficos y ambientales en diferentes proyectos."
+                                images={levantamientosPhotos}
+                            />
+                        </div>
+                    </FadeIn>
+                </div>
             </section>
 
             {/* CTA */}
-            <section className={styles.ctaSection}>
-                <div className={styles.ctaCircle1} />
-                <div className={styles.ctaCircle2} />
-                <div className={styles.ctaSectionContent}>
-                    <h2 className={styles.ctaTitle}>
-                        Vínculo con instituciones académicas
-                    </h2>
-                    <p className={styles.ctaText}>
-                        En GEOBIOS mantenemos un estrecho vínculo con instituciones
-                        académicas y de investigación para enriquecer nuestros estudios con
-                        opiniones científicas de vanguardia.
-                    </p>
-                    <a href="/contacto" className="btn-accent">
-                        Contactar ahora
-                    </a>
-                </div>
-            </section>
+            <FadeIn direction="up">
+                <section className={styles.ctaSection}>
+                    <div className={styles.ctaCircle1} />
+                    <div className={styles.ctaCircle2} />
+                    <div className={styles.ctaSectionContent}>
+                        <h2 className={styles.ctaTitle}>
+                            Vínculo con instituciones académicas
+                        </h2>
+                        <p className={styles.ctaText}>
+                            En GEOBIOS mantenemos un estrecho vínculo con instituciones
+                            académicas y de investigación para enriquecer nuestros estudios con
+                            opiniones científicas de vanguardia.
+                        </p>
+                        <a href="/contacto" className="btn-accent">
+                            Contactar ahora
+                        </a>
+                    </div>
+                </section>
+            </FadeIn>
         </>
     );
 }

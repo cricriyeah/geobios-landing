@@ -7,6 +7,10 @@
   background-color: var(--bg-warm);
 }
 
+.bgWhite {
+  background-color: var(--bg-white);
+}
+
 .container {
   max-width: 80rem;
   margin-left: auto;
@@ -35,44 +39,62 @@
   line-height: 1.625;
 }
 
+/* ─── Dynamic Card Grid ─── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .grid3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* ─── Premium Card ─── */
 .card {
+  position: relative;
   background-color: white;
   border-radius: 0;
-  padding: 2rem;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background: linear-gradient(135deg, rgba(226, 193, 121, 0.04) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: rgba(199, 185, 155, 0.5);
+  box-shadow: 0 12px 40px rgba(18, 17, 57, 0.08);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .cardCentered {
   text-align: center;
-}
-
-.cardInteractive {
-  transition: all 0.3s ease;
-}
-
-.cardInteractive:hover {
-  border-color: rgba(199, 185, 155, 0.3);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
 }
 
 .cardHeader {
@@ -127,29 +149,90 @@
 
 .cardDescription {
   color: var(--text-medium);
-  font-size: 0.875rem;
-  line-height: 1.625;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0;
 }
 
+/* ─── Category Title with Number Badge ─── */
+.categoryTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.categoryTitle::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border-light), transparent);
+}
+
+.categoryNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--primary);
+  color: var(--accent);
+  font-family: var(--font-playfair), serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Service List Items ─── */
 .list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0;
 }
 
 .listItem {
   display: flex;
   align-items: start;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  background-color: var(--bg-warm);
-  border-radius: 0;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background-color: white;
+  border-bottom: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.listItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.listItem:hover {
+  background-color: rgba(226, 193, 121, 0.06);
+  padding-left: 1.5rem;
+}
+
+.listItem:hover::before {
+  width: 3px;
 }
 
 .listItemWhite {
   background-color: white;
   border: 1px solid var(--border-light);
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   transition: all 0.3s ease;
 }
 
@@ -158,23 +241,26 @@
 }
 
 .checkIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
   color: var(--accent);
   flex-shrink: 0;
-  margin-top: 0.125rem;
+  margin-top: 0.2rem;
 }
 
 .listText {
   color: var(--text-medium);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
+/* ─── Footer CTA ─── */
 .footerCta {
   margin-top: 3rem;
   text-align: center;
 }
 
+/* ─── Banner ─── */
 .banner {
   margin-top: 4rem;
   background-color: var(--primary);
@@ -200,9 +286,10 @@
   margin-right: auto;
 }
 
+/* ─── CTA Section ─── */
 .ctaSection {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--primary);
   overflow: hidden;
   width: 100%;
@@ -244,25 +331,30 @@
 .ctaTitle {
   font-family: var(--font-playfair), serif;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.05em;
 }
 
 @media (min-width: 768px) {
   .ctaTitle {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
 .ctaText {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 1.125rem;
-  line-height: 1.75;
-  margin-bottom: 3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.carouselSection {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }

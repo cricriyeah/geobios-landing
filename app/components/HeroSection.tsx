@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
@@ -24,31 +27,50 @@ export default function HeroSection() {
             <div className={styles.contentWrapper}>
                 <div className={styles.container}>
                     <div className={styles.content}>
-
-                        <h1 className={`${styles.title} ${styles.animated} ${styles.fadeInUp} ${styles.delay200}`}>
+                        <motion.h1 
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className={styles.title}
+                        >
                             Especialistas en{" "}
                             <span className={styles.accent}>Consultoría Ambiental</span>
-                        </h1>
+                        </motion.h1>
 
                         {/* Description */}
-                        <p className={`${styles.description} ${styles.animated} ${styles.fadeInUp} ${styles.delay300}`}>
+                        <motion.p 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className={styles.description}
+                        >
                             Estudios y trabajos científicos especializados en materia
                             ambiental. Más de 20 años protegiendo el medio ambiente con
                             soluciones integrales.
-                        </p>
+                        </motion.p>
 
                         {/* CTAs */}
-                        <div className={`${styles.ctaWrapper} ${styles.animated} ${styles.fadeInUp} ${styles.delay400}`}>
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.6 }}
+                            className={styles.ctaWrapper}
+                        >
                             <a href="/contacto" className={styles.btnAccent}>
                                 Solicitar Consultoría
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
 
             {/* Scroll indicator */}
-            <div className={styles.scrollIndicator}>
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                className={styles.scrollIndicator}
+            >
                 <svg
                     className={styles.scrollIcon}
                     fill="none"
@@ -62,7 +84,7 @@ export default function HeroSection() {
                         d="M19 14l-7 7m0 0l-7-7m7 7V3"
                     />
                 </svg>
-            </div>
+            </motion.div>
         </section>
     );
 }

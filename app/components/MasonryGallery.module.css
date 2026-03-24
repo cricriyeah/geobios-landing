@@ -1,0 +1,126 @@
+.gallerySection {
+    width: 100%;
+    margin: 6rem 0;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 0;
+}
+
+@media (min-width: 640px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.galleryItem {
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galleryItem:hover .image {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13, 11, 82, 0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryItem:hover .overlay {
+    opacity: 1;
+}
+
+.zoomIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+}
+
+.galleryItem:hover .zoomIcon {
+    transform: scale(1);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(13, 11, 82, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.closeButton {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2001;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.closeButton:hover {
+    transform: rotate(90deg);
+}
+
+.lightboxContent {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lightboxImage {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+    color: white;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+}

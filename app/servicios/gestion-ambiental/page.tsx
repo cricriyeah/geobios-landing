@@ -1,5 +1,8 @@
+"use client";
+
+import FadeIn from "../../components/FadeIn";
 import PageHero from "../../components/PageHero";
-import SectionTitle from "../../components/SectionTitle";
+import ImageCarousel from "../../components/ImageCarousel";
 import styles from "../ServiceDetail.module.css";
 
 const categories = [
@@ -58,85 +61,70 @@ export default function GestionAmbiental() {
         <>
             <PageHero
                 title="Gestión Ambiental"
-                subtitle="Larga trayectoria en la gestión de trámites y asuntos ambientales"
+                subtitle="Experiencia y compromiso en el cumplimiento de la legislación ambiental"
             />
 
             <section className={`${styles.section} ${styles.bgWarm}`}>
                 <div className={styles.container}>
-                    <div className={styles.intro}>
-                        <SectionTitle
-                            label="Nuestro servicio"
-                            title="Gestión Ambiental"
-                            centered={false}
-                        />
-                        <div className={styles.textBlock}>
-                            <p>
-                                GEOBIOS tiene una larga trayectoria en la gestión de trámites
-                                y asuntos ambientales, tanto federales, estatales y municipales.
-                            </p>
-                            <p>
-                                Contamos con un amplio listado de trámites y asuntos en los
-                                cuales tenemos experiencia; entre los cuales destacan:
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className={`${styles.grid} ${styles.grid3}`}>
+                    <div className={styles.grid}>
                         {categories.map((category, i) => (
-                            <div
-                                key={i}
-                                className={styles.card}
-                            >
-                                <h3 className={styles.cardHeader}>
-                                    <div className={styles.iconWrapper}>
-                                        <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                                        </svg>
+                            <FadeIn key={i} direction="up" delay={i * 0.1}>
+                                <div className={styles.card}>
+                                    <h3 className={styles.categoryTitle}>
+                                        <span className={styles.categoryNumber}>{String(i + 1).padStart(2, '0')}</span>
+                                        {category.title}
+                                    </h3>
+                                    <div className={styles.list}>
+                                        {category.items.map((item, j) => (
+                                            <div
+                                                key={j}
+                                                className={styles.listItem}
+                                            >
+                                                <svg className={styles.checkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span className={styles.listText}>{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <span className={styles.cardTitle}>{category.title}</span>
-                                </h3>
-                                <div className={styles.list}>
-                                    {category.items.map((item, j) => (
-                                        <div
-                                            key={j}
-                                            className={styles.listItem}
-                                        >
-                                            <svg className={styles.checkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                            <span className={styles.listText}>{item}</span>
-                                        </div>
-                                    ))}
                                 </div>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
-
-                    <div className={styles.footerCta}>
-                        <a href="/contacto" className="btn-primary">
-                            Solicitar este servicio
-                        </a>
+                    <div className={styles.carouselSection}>
+                        <ImageCarousel
+                            title="Desarrollo de Levantamientos en Campo"
+                            description="Realizamos levantamientos técnicos con precisión para el desarrollo de estudios ambientales de alta calidad."
+                            images={[
+                                { src: "/images/fotos-geo/Levantamientos/IMG_20220112_100949264_HDR.jpg", alt: "Levantamientos en sitio" },
+                                { src: "/images/fotos-geo/Levantamientos/IMG_20231016_095559.jpg", alt: "Equipo GEOBIOS en levantamientos ambientales" },
+                                { src: "/images/fotos-geo/Levantamientos/PXL_20220602_143130730.jpg", alt: "Mediciones de campo" },
+                                { src: "/images/fotos-geo/Levantamientos/20250930_113303.jpg", alt: "Supervisión técnica de campo" }
+                            ]}
+                        />
                     </div>
                 </div>
             </section>
 
             {/* CTA */}
-            <section className={styles.ctaSection}>
-                <div className={styles.ctaCircle1} />
-                <div className={styles.ctaCircle2} />
-                <div className={styles.ctaSectionContent}>
-                    <h2 className={styles.ctaTitle}>
-                        ¿Necesita apoyo en gestión ambiental?
-                    </h2>
-                    <p className={styles.ctaText}>
-                        Contáctenos y con gusto le asesoraremos para encontrar la solución
-                        más adecuada para su proyecto.
-                    </p>
-                    <a href="/contacto" className="btn-accent">
-                        Contactar ahora
-                    </a>
-                </div>
-            </section>
+            <FadeIn direction="up">
+                <section className={styles.ctaSection}>
+                    <div className={styles.ctaCircle1} />
+                    <div className={styles.ctaCircle2} />
+                    <div className={styles.ctaSectionContent}>
+                        <h2 className={styles.ctaTitle}>
+                            ¿Necesita apoyo en gestión ambiental?
+                        </h2>
+                        <p className={styles.ctaText}>
+                            Contáctenos y con gusto le asesoraremos para encontrar la solución
+                            más adecuada para su proyecto.
+                        </p>
+                        <a href="/contacto" className="btn-accent">
+                            Contactar ahora
+                        </a>
+                    </div>
+                </section>
+            </FadeIn>
         </>
     );
 }

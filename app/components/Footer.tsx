@@ -21,8 +21,8 @@ export default function Footer() {
                             <Image
                                 src="/images/logoblanco1.png"
                                 alt="GEOBIOS Logo"
-                                width={188}
-                                height={128}
+                                width={140}
+                                height={96}
                             />
                         </div>
                         <p className={styles.description}>

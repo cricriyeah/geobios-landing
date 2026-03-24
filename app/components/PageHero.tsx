@@ -1,15 +1,34 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
 import styles from "./PageHero.module.css";
 
 interface PageHeroProps {
     title: string;
     subtitle?: string;
+    backgroundImage?: string;
 }
 
-export default function PageHero({ title, subtitle }: PageHeroProps) {
+export default function PageHero({ title, subtitle, backgroundImage }: PageHeroProps) {
     return (
         <section className={styles.hero}>
-            {/* Background Pattern */}
-            <div className={styles.bg} />
+            {/* Background */}
+            {backgroundImage ? (
+                <>
+                    <Image
+                        src={backgroundImage}
+                        alt=""
+                        fill
+                        className={styles.bgImage}
+                        priority
+                        sizes="100vw"
+                    />
+                    <div className={styles.bgOverlay} />
+                </>
+            ) : (
+                <div className={styles.bg} />
+            )}
 
             {/* Decorative circles */}
             <div className={styles.circle1} />
@@ -20,15 +39,31 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
 
             {/* Content */}
             <div className={styles.content}>
-                <div className={`${styles.goldLine} ${styles.animated} ${styles.fadeIn}`} />
-                <h1 className={`${styles.title} ${styles.animated} ${styles.fadeInUp} ${styles.delay100}`}>
+                <motion.h1 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className={styles.title}
+                >
                     {title}
-                </h1>
+                </motion.h1>
                 {subtitle && (
-                    <p className={`${styles.subtitle} ${styles.animated} ${styles.fadeInUp} ${styles.delay200}`}>
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className={styles.subtitle}
+                    >
                         {subtitle}
-                    </p>
+                    </motion.p>
                 )}
+                <motion.div 
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    style={{ transformOrigin: "center" }}
+                    className={styles.goldLine} 
+                />
             </div>
         </section>
     );

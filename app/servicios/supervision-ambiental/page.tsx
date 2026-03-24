@@ -1,5 +1,8 @@
+"use client";
+
+import FadeIn from "../../components/FadeIn";
 import PageHero from "../../components/PageHero";
-import SectionTitle from "../../components/SectionTitle";
+import ImageCarousel from "../../components/ImageCarousel";
 import styles from "../ServiceDetail.module.css";
 
 const services = [
@@ -36,61 +39,73 @@ const services = [
     },
 ];
 
+const supervisionPhotos = [
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/DJI_0487.jpg", alt: "Vista aérea de supervisión ambiental" },
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/DJI_0489.jpg", alt: "Supervisión con drone en granja eólica" },
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/IMG_20231124_124342.jpg", alt: "Supervisión ambiental en campo" },
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/IMG_20240425_141042.jpg", alt: "Monitoreo ambiental de proyecto eólico" },
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/IMG_20250129_141420200_HDR.jpg", alt: "Inspección ambiental en sitio" },
+    { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/WhatsApp Image 2024-09-27 at 12.23.27 PM (1).jpeg", alt: "Equipo de supervisión en proyecto" },
+];
+
 export default function SupervisionAmbiental() {
     return (
         <>
             <PageHero
                 title="Supervisión Ambiental"
-                subtitle="Monitoreo y vigilancia continua para el cumplimiento ambiental"
+                subtitle="Seguimiento puntual y efectivo para garantizar la sustentabilidad"
             />
 
             <section className={`${styles.section} ${styles.bgWarm}`}>
                 <div className={styles.container}>
-                    <SectionTitle
-                        label="Nuestro servicio"
-                        title="Supervisión Ambiental"
-                    />
-
-                    <div className={`${styles.grid} ${styles.grid3} mt-8`}>
+                    <div className={styles.grid}>
                         {services.map((service, i) => (
-                            <div
-                                key={i}
-                                className={`${styles.card} ${styles.cardCentered} ${styles.cardInteractive}`}
-                            >
-                                <div className={`${styles.iconWrapper} ${styles.iconWrapperLg} ${styles.iconWrapperCentered}`}>
-                                    <div className={styles.iconLg}>
-                                        {service.icon}
-                                    </div>
+                            <FadeIn key={i} direction="up" delay={i * 0.1}>
+                                <div className={styles.card}>
+                                    <h3 className={styles.categoryTitle}>
+                                        <span className={styles.categoryNumber}>{String(i + 1).padStart(2, '0')}</span>
+                                        {service.title}
+                                    </h3>
+                                    <p className={styles.cardDescription}>
+                                        {service.description}
+                                    </p>
                                 </div>
-                                <h3 className={styles.cardTitle}>
-                                    {service.title}
-                                </h3>
-                                <p className={styles.cardDescription}>
-                                    {service.description}
-                                </p>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
+
+                    <FadeIn direction="up">
+                        <div className={styles.carouselSection}>
+                            <ImageCarousel
+                                title="Supervisión en Proyectos Eólicos y RSL"
+                                description="Registro fotográfico de nuestra supervisión ambiental en granjas eólicas y proyectos de relleno sanitario."
+                                images={supervisionPhotos}
+                            />
+                        </div>
+                    </FadeIn>
                 </div>
             </section>
 
             {/* CTA */}
-            <section className={styles.ctaSection}>
-                <div className={styles.ctaCircle1} />
-                <div className={styles.ctaCircle2} />
-                <div className={styles.ctaSectionContent}>
-                    <h2 className={styles.ctaTitle}>
-                        ¡Pregunta por nuestros planes y beneficios!
-                    </h2>
-                    <p className={styles.ctaText}>
-                        Garantice el cumplimiento ambiental de sus proyectos con nuestro
-                        equipo de supervisores certificados.
-                    </p>
-                    <a href="/contacto" className="btn-accent">
-                        Contactar ahora
-                    </a>
-                </div>
-            </section>
+            <FadeIn direction="up">
+                <section className={styles.ctaSection}>
+                    <div className={styles.ctaCircle1} />
+                    <div className={styles.ctaCircle2} />
+                    <div className={styles.ctaSectionContent}>
+                        <h2 className={styles.ctaTitle}>
+                            ¡Pregunta por nuestros planes y beneficios!
+                        </h2>
+                        <p className={styles.ctaText}>
+                            Garantice el cumplimiento ambiental de sus proyectos con nuestro
+                            equipo de supervisores certificados.
+                        </p>
+                        <a href="/contacto" className="btn-accent">
+                            Contactar ahora
+                        </a>
+                    </div>
+                </section>
+            </FadeIn>
         </>
     );
 }
+

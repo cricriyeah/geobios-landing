@@ -34,6 +34,14 @@
   }
 }
 
+.formCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border-light);
+  height: 100%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -184,4 +192,10 @@
 
 .mapText {
   font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .formCard {
+    padding: 2rem 1.5rem;
+  }
 }

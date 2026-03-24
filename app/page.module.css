@@ -194,3 +194,20 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(199, 185, 155, 0.3);
 }
+.gallerySection {
+  padding: 6rem 0;
+  background-color: var(--bg-white);
+}
+
+.galleryContainer {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .galleryContainer {
+    padding: 0 2rem;
+  }
+}

@@ -1,6 +1,11 @@
+"use client";
+
+import { motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import SectionTitle from "./components/SectionTitle";
 import ServiceCard from "./components/ServiceCard";
+import ImageCarousel from "./components/ImageCarousel";
+import Counter from "./components/Counter";
 import styles from "./page.module.css";
 
 const services = [
@@ -58,6 +63,27 @@ const stats = [
   { value: "4", label: "Áreas de especialidad" },
 ];
 
+const dronePhotos = [
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/WhatsApp Image 2024-09-27 at 12.00.44 PM.jpeg", alt: "Vista aérea de proyecto ambiental" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/WhatsApp Image 2024-09-27 at 12.23.26 PM (2).jpeg", alt: "Fotografía con drone de alta resolución" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/WhatsApp Image 2024-09-27 at 12.23.26 PM.jpeg", alt: "Monitoreo aéreo de terrenos" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/dji_fly_20250925_102542_202_1758821172179_photo.jpg", alt: "Vuelo de drone GEOBIOS" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/dji_fly_20250929_111040_298_1759169552859_photo.jpg", alt: "Inspección técnica aérea" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/dji_fly_20250929_111154_303_1759169674572_photo.jpg", alt: "Panorámica de cumplimiento ambiental" },
+  { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG_20240311_105517.jpg", alt: "Rescate y Reubicación de Fauna" },
+  { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20230706_083346.jpg", alt: "Rescate y Reubicación de Flora" },
+  { src: "/images/fotos-geo/Levantamientos/IMG_20220112_101748999.jpg", alt: "Levantamientos de Campo" },
+  { src: "/images/fotos-geo/Supervision Ambiental RSL- GRANJAS-EOLICA/20250828_105553.jpg", alt: "Supervisión Ambiental" },
+  { src: "/images/fotos-geo/FOTOS PAGINA SR LORENZO/DSC_0060.JPG", alt: "Equipo de trabajo GEOBIOS" },
+  { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/WhatsApp Image 2024-09-27 at 12.00.44 PM (3).jpeg", alt: "Protección de Especies Locales" },
+  { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20231130_090247.jpg", alt: "Preservación Vegetal" },
+  { src: "/images/fotos-geo/Levantamientos/PXL_20220602_151217557.jpg", alt: "Inspección Técnica en Sitio" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/IMG-20250118-WA0004.jpg", alt: "Operación de drone en campo" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/IMG-20250118-WA0012.jpg", alt: "Equipo de drone avanzado" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/IMG-20250118-WA0020.jpg", alt: "Levantamiento aéreo de datos" },
+  { src: "/images/fotos-geo/Fotos Vuelos de Drone/IMG-20250118-WA0032.jpg", alt: "Fotogrametría con drone" },
+];
+
 export default function Home() {
   return (
     <>
@@ -96,19 +122,42 @@ export default function Home() {
             </div>
 
             {/* Stats Grid */}
-            <div className={styles.statsGrid}>
+            <motion.div 
+              className={styles.statsGrid}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.1,
+                  },
+                },
+              }}
+            >
               {stats.map((stat, i) => (
-                <div
+                <motion.div
                   key={i}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    show: { opacity: 1, scale: 1 },
+                  }}
+                  whileHover={{ 
+                    y: -10, 
+                    borderColor: 'var(--accent)',
+                    boxShadow: '0 10px 30px -10px rgba(13, 11, 82, 0.1)' 
+                  }}
                   className={styles.statCard}
                 >
                   <p className={styles.statValue}>
-                    {stat.value}
+                    <Counter value={stat.value} />
                   </p>
                   <p className={styles.statLabel}>{stat.label}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -124,7 +173,7 @@ export default function Home() {
 
           <div className={styles.servicesGrid}>
             {services.map((service, i) => (
-              <ServiceCard key={i} {...service} />
+              <ServiceCard key={i} index={i} {...service} />
             ))}
           </div>
         </div>
@@ -148,6 +197,17 @@ export default function Home() {
               Solicitar Consultoría
             </a>
           </div>
+        </div>
+      </section>
+      {/* Drone Gallery Section */}
+      <section className={styles.gallerySection}>
+        <div className={styles.galleryContainer}>
+          <ImageCarousel
+            title="Galería de Imágenes"
+            description="Utilizamos tecnología de drones de última generación para obtener perspectivas detalladas y datos precisos de sus proyectos."
+            images={dronePhotos}
+            visibleItemsCount={1}
+          />
         </div>
       </section>
     </>

@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import FadeIn from "../components/FadeIn";
 import PageHero from "../components/PageHero";
 import SectionTitle from "../components/SectionTitle";
 import { useState } from "react";
@@ -30,118 +32,140 @@ export default function Contacto() {
                 <div className={styles.container}>
                     <div className={styles.grid}>
                         {/* Form */}
-                        <div>
-                            <SectionTitle
-                                label="Escríbanos"
-                                title="Envíenos un Mensaje"
-                                centered={false}
-                            />
-                            <form onSubmit={handleSubmit} className={styles.form}>
-                                <div className={styles.formRow}>
+                        <FadeIn direction="left" duration={0.8}>
+                            <div className={styles.formCard}>
+                                <SectionTitle
+                                    label="Escríbanos"
+                                    title="Envíenos un Mensaje"
+                                    centered={false}
+                                />
+                                <form onSubmit={handleSubmit} className={styles.form}>
+                                    <div className={styles.formRow}>
+                                        <div>
+                                            <label className={styles.label}>
+                                                Nombre completo
+                                            </label>
+                                            <input
+                                                type="text"
+                                                required
+                                                value={formData.nombre}
+                                                onChange={(e) =>
+                                                    setFormData({ ...formData, nombre: e.target.value })
+                                                }
+                                                className={styles.input}
+                                                placeholder="Su nombre"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className={styles.label}>
+                                                Correo electrónico
+                                            </label>
+                                            <input
+                                                type="email"
+                                                required
+                                                value={formData.email}
+                                                onChange={(e) =>
+                                                    setFormData({ ...formData, email: e.target.value })
+                                                }
+                                                className={styles.input}
+                                                placeholder="correo@ejemplo.com"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.formRow}>
+                                        <div>
+                                            <label className={styles.label}>
+                                                Teléfono
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                value={formData.telefono}
+                                                onChange={(e) =>
+                                                    setFormData({ ...formData, telefono: e.target.value })
+                                                }
+                                                className={styles.input}
+                                                placeholder="+52 612 000 0000"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className={styles.label}>
+                                                Servicio de interés
+                                            </label>
+                                            <select
+                                                value={formData.servicio}
+                                                onChange={(e) =>
+                                                    setFormData({ ...formData, servicio: e.target.value })
+                                                }
+                                                className={styles.select}
+                                            >
+                                                <option value="">Seleccionar servicio</option>
+                                                <option value="gestion">Gestión Ambiental</option>
+                                                <option value="supervision">Supervisión Ambiental</option>
+                                                <option value="estudios">
+                                                    Estudios y Programas Ambientales
+                                                </option>
+                                                <option value="asesoria">
+                                                    Asesoría Jurídica Ambiental
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div>
                                         <label className={styles.label}>
-                                            Nombre completo
+                                            Mensaje
                                         </label>
-                                        <input
-                                            type="text"
+                                        <textarea
                                             required
-                                            value={formData.nombre}
+                                            rows={5}
+                                            value={formData.mensaje}
                                             onChange={(e) =>
-                                                setFormData({ ...formData, nombre: e.target.value })
+                                                setFormData({ ...formData, mensaje: e.target.value })
                                             }
-                                            className={styles.input}
-                                            placeholder="Su nombre"
+                                            className={styles.textarea}
+                                            placeholder="Describa su consulta o proyecto..."
                                         />
                                     </div>
-                                    <div>
-                                        <label className={styles.label}>
-                                            Correo electrónico
-                                        </label>
-                                        <input
-                                            type="email"
-                                            required
-                                            value={formData.email}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, email: e.target.value })
-                                            }
-                                            className={styles.input}
-                                            placeholder="correo@ejemplo.com"
-                                        />
-                                    </div>
-                                </div>
 
-                                <div className={styles.formRow}>
-                                    <div>
-                                        <label className={styles.label}>
-                                            Teléfono
-                                        </label>
-                                        <input
-                                            type="tel"
-                                            value={formData.telefono}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, telefono: e.target.value })
-                                            }
-                                            className={styles.input}
-                                            placeholder="+52 612 000 0000"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className={styles.label}>
-                                            Servicio de interés
-                                        </label>
-                                        <select
-                                            value={formData.servicio}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, servicio: e.target.value })
-                                            }
-                                            className={styles.select}
-                                        >
-                                            <option value="">Seleccionar servicio</option>
-                                            <option value="gestion">Gestión Ambiental</option>
-                                            <option value="supervision">Supervisión Ambiental</option>
-                                            <option value="estudios">
-                                                Estudios y Programas Ambientales
-                                            </option>
-                                            <option value="asesoria">
-                                                Asesoría Jurídica Ambiental
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className={styles.label}>
-                                        Mensaje
-                                    </label>
-                                    <textarea
-                                        required
-                                        rows={5}
-                                        value={formData.mensaje}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, mensaje: e.target.value })
-                                        }
-                                        className={styles.textarea}
-                                        placeholder="Describa su consulta o proyecto..."
-                                    />
-                                </div>
-
-                                <button type="submit" className={`${styles.btnPrimary} cursor-pointer`}>
-                                    Enviar Mensaje
-                                </button>
-                            </form>
-                        </div>
+                                    <button type="submit" className={`${styles.btnPrimary} cursor-pointer`}>
+                                        Enviar Mensaje
+                                    </button>
+                                </form>
+                            </div>
+                        </FadeIn>
 
                         {/* Contact Info */}
                         <div className={styles.infoStack}>
-                            <SectionTitle
-                                label="Información de contacto"
-                                title="Hable con Nosotros"
-                                centered={false}
-                            />
+                            <FadeIn direction="right" delay={0.2}>
+                                <SectionTitle
+                                    label="Información de contacto"
+                                    title="Hable con Nosotros"
+                                    centered={false}
+                                />
+                            </FadeIn>
 
                             {/* Contact Cards */}
-                            <div className={styles.cardsStack}>
-                                <div className={styles.infoCard}>
+                            <motion.div 
+                                className={styles.cardsStack}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: true }}
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    show: {
+                                        opacity: 1,
+                                        transition: { staggerChildren: 0.1 }
+                                    }
+                                }}
+                            >
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, x: 20 },
+                                        show: { opacity: 1, x: 0 }
+                                    }}
+                                    className={styles.infoCard}
+                                >
                                     <div className={styles.cardContent}>
                                         <div className={styles.iconWrapper}>
                                             <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -166,9 +190,15 @@ export default function Contacto() {
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className={styles.infoCard}>
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, x: 20 },
+                                        show: { opacity: 1, x: 0 }
+                                    }}
+                                    className={styles.infoCard}
+                                >
                                     <div className={styles.cardContent}>
                                         <div className={styles.iconWrapper}>
                                             <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -193,19 +223,21 @@ export default function Contacto() {
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
                             {/* Map placeholder */}
-                            <div className={styles.mapPlaceholder}>
-                                <div className={styles.mapContent}>
-                                    <svg className={styles.mapIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                    </svg>
-                                    <p className={styles.mapText}>Baja California Sur, México</p>
+                            <FadeIn direction="up" delay={0.5}>
+                                <div className={styles.mapPlaceholder}>
+                                    <div className={styles.mapContent}>
+                                        <svg className={styles.mapIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        <p className={styles.mapText}>Baja California Sur, México</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>
