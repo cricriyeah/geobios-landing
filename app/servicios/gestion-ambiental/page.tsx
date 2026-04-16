@@ -52,6 +52,9 @@ const categories = [
         title: "CONAGUA",
         items: [
             "Solicitud de dictamen de no afectaciones de escurrimientos pluviales",
+            "Solicitud de concesión de pozo exploratorio playero",
+            "Solicitud de concesión para ocupar la zona federal",
+            "Solicitud de validación de los estudios técnicos para la delimitación de la zona federal",
         ],
     },
 ];

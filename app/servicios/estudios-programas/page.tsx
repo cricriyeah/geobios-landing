@@ -10,37 +10,28 @@ const categories = [
         title: "Estudios Específicos con Dron",
         items: [
             "Supervisión de proyectos y obras",
-            "Ortografía y modelado 3D",
             "Fotografía aérea y filmación de video",
             "Cartografía",
-            "Estimación de masa forestal",
         ],
     },
     {
-        title: "Programas de Rescate de Flora y Fauna",
+        title: "Rescate de Flora y Fauna Silvestre",
         items: [
-            "Monitoreo de flora y fauna",
-            "Análisis de los resultados del monitoreo",
-            "Estrategias de rescate",
-            "Seguimiento del rescate",
+            "Estudios de caracterización de flora silvestre",
+            "Estudios de monitoreo de fauna silvestre.",
+            "Estrategias de rescate de flora y fauna",
+            "Actividades de Rescate y Reubicación de Flora Silvestre.",
+            "Actividades de Rescate y Reubicación de Fauna Silvestre.",
+            "Seguimiento de Programas de Rescate de Flora y Fauna.",
         ],
     },
     {
-        title: "Planes de Manejo de Residuos",
-        items: [
-            "Planes de manejo de residuos peligrosos",
-            "Planes de manejo de residuos de manejo especial",
-            "Planes de manejo de residuos sólidos urbanos",
-            "Estudios de caracterización y generación de residuos",
-        ],
-    },
-    {
-        title: "Estudios de Generación de Residuos",
+        title: "Estudios de Generación y Planes de Manejo de Residuos",
         items: [
             "Planes de manejo de residuos peligrosos",
             "Planes de manejo de residuos de manejo especial",
             "Planes de manejo de residuos sólidos urbanos",
-            "Estudios de caracterización y generación de residuos",
+            "Estudios de caracterización y generación de residuos.",
         ],
     },
 ];
@@ -145,12 +136,15 @@ export default function EstudiosProgramas() {
                     <div className={styles.ctaCircle2} />
                     <div className={styles.ctaSectionContent}>
                         <h2 className={styles.ctaTitle}>
-                            Vínculo con instituciones académicas
+                            Vínculo con Instituciones Académicas
                         </h2>
                         <p className={styles.ctaText}>
                             En GEOBIOS mantenemos un estrecho vínculo con instituciones
-                            académicas y de investigación para enriquecer nuestros estudios con
-                            opiniones científicas de vanguardia.
+                            académicas y de investigación como la Universidad Autónoma de
+                            Baja California Sur (UABCS), el Centro de Investigaciones
+                            Biológicas del Noroeste (CIBNOR) y el Centro Interdisciplinario
+                            de Ciencias Marinas (CICIMAR), entre otros, para enriquecer
+                            nuestros estudios con opiniones científicas de vanguardia.
                         </p>
                         <a href="/contacto" className="btn-accent">
                             Contactar ahora

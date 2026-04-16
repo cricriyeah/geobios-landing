@@ -34,7 +34,7 @@ export default function HeroSection() {
                             className={styles.title}
                         >
                             Especialistas en{" "}
-                            <span className={styles.accent}>Consultoría Ambiental</span>
+                            <span className={styles.accent}>Medio Ambiente</span>
                         </motion.h1>
 
                         {/* Description */}
@@ -44,9 +44,10 @@ export default function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className={styles.description}
                         >
-                            Estudios y trabajos científicos especializados en materia
-                            ambiental. Más de 20 años protegiendo el medio ambiente con
-                            soluciones integrales.
+                            Más de 20 años de experiencia en estudios ambientales, gestión
+                            de trámites, supervisión de proyectos y cumplimiento normativo
+                            en materia ambiental. Lideramos su proyecto o nos integramos a
+                            él. Experiencia local, soluciones a su medida.
                         </motion.p>
 
                         {/* CTAs */}

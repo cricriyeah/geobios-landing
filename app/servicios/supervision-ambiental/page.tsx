@@ -93,11 +93,12 @@ export default function SupervisionAmbiental() {
                     <div className={styles.ctaCircle2} />
                     <div className={styles.ctaSectionContent}>
                         <h2 className={styles.ctaTitle}>
-                            ¡Pregunta por nuestros planes y beneficios!
+                            Supervisión ambiental con respaldo técnico y jurídico.
                         </h2>
                         <p className={styles.ctaText}>
-                            Garantice el cumplimiento ambiental de sus proyectos con nuestro
-                            equipo de supervisores certificados.
+                            Contáctenos y diseñemos juntos el esquema de supervisión que su
+                            proyecto necesita. Garantice el cumplimiento ambiental de sus
+                            proyectos con nuestro equipo de supervisores certificados.
                         </p>
                         <a href="/contacto" className="btn-accent">
                             Contactar ahora

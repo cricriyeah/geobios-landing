@@ -33,13 +33,13 @@ const team = [
         name: "Geol. Lorenzo Javier López Vázquez",
         role: "Director General",
         description:
-            "Geólogo con amplia experiencia en estudios geológicos, geográficos y ambientales. Lidera la dirección estratégica y técnica de GEOBIOS.",
+            "Geólogo especializado en materia ambiental y fundador de GEOBIOS. Con más de 20 años de experiencia en evaluación de impacto ambiental, supervisión de proyectos y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno. Lidera la dirección estratégica y técnica de la empresa con un enfoque multidisciplinario orientado al desarrollo sustentable.",
     },
     {
         name: "Lic. Joanna Sermeño Gochez",
         role: "Subdirector General / Jurídico",
         description:
-            "Especialista en derecho ambiental con experiencia en gestión de trámites y cumplimiento normativo ante autoridades ambientales.",
+            "Licenciada en Derecho especializada en materia ambiental. Cuenta con amplia experiencia en asesoría jurídica, recursos administrativos y gestión de trámites ante autoridades ambientales de los distintos órdenes de gobierno. Brinda acompañamiento integral a sus clientes desde la obtención de autorizaciones hasta el cumplimiento de condicionantes, garantizando seguridad jurídica en cada etapa de sus proyectos.",
     },
 ];
 
@@ -101,21 +101,11 @@ export default function Nosotros() {
                                 centered={false}
                             />
                             <div className={styles.textBlock}>
-                                <p>
-                                    Consultoría Ambiental GEOBIOS es una empresa fundada en el año
-                                    2000 por un grupo multidisciplinario de profesionistas
-                                    preocupados por el desarrollo de los Estados, la conservación
-                                    ambiental y el aprovechamiento respetuoso de los recursos
-                                    naturales, mediante el cumplimiento de la legislación ambiental
-                                    vigente.
+                                <p style={{ textAlign: 'justify' }}>
+                                    Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000 con más de 20 años de experiencia en evaluación de impacto ambiental, gestión de trámites y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno.
                                 </p>
-                                <p>
-                                    GEOBIOS está representado por personal profesional altamente
-                                    capacitado y consciente de la importancia que reviste la
-                                    conservación de los recursos naturales y el desarrollo de
-                                    proyectos compatibles y congruentes con los Planes y Programas
-                                    de Desarrollo en cada Estado, manteniendo un equilibrio con su
-                                    entorno.
+                                <p style={{ textAlign: 'justify' }}>
+                                    Somos una plataforma de servicios técnicos, científicos y jurídicos especializados en materia ambiental. Trabajamos tanto como empresa líder que coordina y entrega proyectos de forma integral, como equipo de respaldo local para desarrolladoras, despachos y empresas externas que deseen operar en Baja California Sur, aportando cobertura operativa en campo, conocimiento del territorio y presencia directa ante las autoridades reguladoras competentes.
                                 </p>
                             </div>
                         </FadeIn>
@@ -154,10 +144,9 @@ export default function Nosotros() {
                                     </div>
                                     <p className={styles.cardText}>
                                         Ser una empresa que utiliza los conocimientos científicos y
-                                        tecnología de vanguardia para aportar elementos para la toma
-                                        de decisiones en la gestión de la sustentabilidad. Para
-                                        alcanzar esta visión, asumimos compromisos con calidad y
-                                        espíritu de servicio.
+                                        tecnología de vanguardia que aporta elementos para la toma
+                                        de decisiones en la gestión de la sustentabilidad. Asumimos
+                                        compromisos con calidad y espíritu de servicio.
                                     </p>
                                 </motion.div>
                             </FadeIn>
@@ -226,7 +215,7 @@ export default function Nosotros() {
                     <SectionTitle
                         label="Nuestro equipo"
                         title="Equipo Directivo"
-                        description="Profesionales con amplia trayectoria y compromiso con la excelencia ambiental."
+                        description="Contamos con un equipo multidisciplinario de biólogos, geólogos, topógrafos, ingenieros ambientales, supervisores ambientales y especialistas jurídicos, con amplio conocimiento del territorio, los ecosistemas y la legislación ambiental aplicable en Baja California Sur."
                     />
 
                     <div className={styles.teamGrid}>

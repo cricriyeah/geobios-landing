@@ -100,21 +100,19 @@ export default function Home() {
                 title="¿Quiénes Somos?"
                 centered={false}
               />
-              <p className={`${styles.textMedium} ${styles.mb6}`}>
-                Consultoría Ambiental GEOBIOS es una empresa fundada en el año
-                2000 por un grupo multidisciplinario de profesionistas
-                preocupados por el desarrollo de los Estados, la conservación
-                ambiental y el aprovechamiento respetuoso de los recursos
-                naturales, mediante el cumplimiento de la legislación ambiental
-                vigente.
+              <p className={`${styles.textMedium} ${styles.mb6}`} style={{ textAlign: 'justify' }}>
+                Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000
+                con más de 20 años de experiencia en evaluación de impacto ambiental,
+                gestión de trámites y cumplimiento normativo ante autoridades ambientales
+                de los distintos órdenes de gobierno.
               </p>
-              <p className={`${styles.textMedium} ${styles.mb8}`}>
-                GEOBIOS está representado por personal profesional altamente
-                capacitado y consciente de la importancia que reviste la
-                conservación de los recursos naturales y el desarrollo de
-                proyectos compatibles y congruentes con los Planes y Programas
-                de Desarrollo en cada Estado, manteniendo un equilibrio con su
-                entorno.
+              <p className={`${styles.textMedium} ${styles.mb8}`} style={{ textAlign: 'justify' }}>
+                Somos una plataforma de servicios técnicos, científicos y jurídicos
+                especializados en materia ambiental. Trabajamos tanto como empresa líder
+                que coordina y entrega proyectos de forma integral, como equipo de respaldo
+                local para desarrolladoras, despachos y empresas externas que deseen operar
+                en Baja California Sur, aportando cobertura operativa en campo, conocimiento
+                del territorio y presencia directa ante las autoridades reguladoras competentes.
               </p>
               <a href="/nosotros" className={styles.btnPrimary}>
                 Conocer nuestra historia
