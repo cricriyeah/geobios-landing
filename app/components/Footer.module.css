@@ -125,11 +125,18 @@
   font-size: 0.75rem;
 }
 
+.contactLinksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .contactPhone {
   color: rgba(199, 185, 155, 0.8);
   font-size: 0.875rem;
   transition: color 0.3s ease;
   text-decoration: none;
+  display: block;
 }
 
 .contactPhone:hover {

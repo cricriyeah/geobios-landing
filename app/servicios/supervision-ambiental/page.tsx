@@ -77,8 +77,8 @@ export default function SupervisionAmbiental() {
                     <FadeIn direction="up">
                         <div className={styles.carouselSection}>
                             <ImageCarousel
-                                title="Supervisión en Proyectos Eólicos y RSL"
-                                description="Registro fotográfico de nuestra supervisión ambiental en granjas eólicas y proyectos de relleno sanitario."
+                                title="SUPERVISIÓN AMBIENTAL EN PROYECTOS"
+                                description="Registro fotográfico de nuestra supervisión ambiental en proyectos"
                                 images={supervisionPhotos}
                             />
                         </div>

@@ -91,7 +91,7 @@ export default function Footer() {
                             Contacto
                         </h4>
                         <div className={styles.contactWrapper}>
-                            <div>
+                            <div className={styles.contactLinksContainer}>
                                 <p className={styles.contactName}>
                                     M. en C. Adriel Bareño Villa
                                 </p>
@@ -102,7 +102,7 @@ export default function Footer() {
                                     href="tel:+526121040049"
                                     className={styles.contactPhone}
                                 >
-                                    +52 612 104 0049
+                                    612 104 0049
                                 </a>
                                 <a
                                     href="mailto:adriel.bareno@geobios.mx"

@@ -9,7 +9,7 @@ const categories = [
     {
         title: "Impacto Ambiental",
         items: [
-            "Manifestación de impacto ambiental federales en todas sus modalidades",
+            "Manifestación de impacto ambiental federal en todas sus modalidades",
             "Modificaciones a proyectos autorizados",
             "Cambios de titularidad",
             "Manifestación de impacto ambiental estatal",
@@ -35,7 +35,7 @@ const categories = [
     {
         title: "Vida Silvestre",
         items: [
-            "Registro UMA/PIMVS",
+            "Registro de Unidades de Manejo para la Conservación de Vida Silvestre (UMA/PIMVS)",
             "Autorización de aprovechamiento forestal",
             "Autorización de aprovechamiento no extractivo",
         ],

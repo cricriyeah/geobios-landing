@@ -35,12 +35,7 @@ const team = [
         description:
             "Geólogo especializado en materia ambiental y fundador de GEOBIOS. Con más de 20 años de experiencia en evaluación de impacto ambiental, supervisión de proyectos y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno. Lidera la dirección estratégica y técnica de la empresa con un enfoque multidisciplinario orientado al desarrollo sustentable.",
     },
-    {
-        name: "Lic. Joanna Sermeño Gochez",
-        role: "Subdirector General / Jurídico",
-        description:
-            "Licenciada en Derecho especializada en materia ambiental. Cuenta con amplia experiencia en asesoría jurídica, recursos administrativos y gestión de trámites ante autoridades ambientales de los distintos órdenes de gobierno. Brinda acompañamiento integral a sus clientes desde la obtención de autorizaciones hasta el cumplimiento de condicionantes, garantizando seguridad jurídica en cada etapa de sus proyectos.",
-    },
+
 ];
 
 const values = [

@@ -15,8 +15,8 @@ export default function HeroSection() {
                 className={styles.video}
             >
                 <source
-                    src="https://res.cloudinary.com/dkofkzzc5/video/upload/v1772141761/13403190-uhd_3840_2160_60fps_1_1_mdgcey.mp4"
-                    type="video/mp4"
+                    src="/videos/desierto.webm"
+                    type="video/webm"
                 />
             </video>
 

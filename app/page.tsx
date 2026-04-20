@@ -17,7 +17,7 @@ const services = [
     ),
     title: "Gestión Ambiental",
     description:
-      "Larga trayectoria en la gestión de trámites y asuntos ambientales federales, estatales y municipales.",
+      "Larga trayectoria en la gestión de trámites y asuntos ambientales federal, estatal y municipal.",
     href: "/servicios/gestion-ambiental",
   },
   {
