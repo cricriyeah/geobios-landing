@@ -99,10 +99,11 @@ export default function GestionAmbiental() {
                             title="Desarrollo de Levantamientos en Campo"
                             description="Realizamos levantamientos técnicos con precisión para el desarrollo de estudios ambientales de alta calidad."
                             images={[
-                                { src: "/images/fotos-geo/Levantamientos/IMG_20220112_100949264_HDR.jpg", alt: "Levantamientos en sitio" },
-                                { src: "/images/fotos-geo/Levantamientos/IMG_20231016_095559.jpg", alt: "Equipo GEOBIOS en levantamientos ambientales" },
-                                { src: "/images/fotos-geo/Levantamientos/PXL_20220602_143130730.jpg", alt: "Mediciones de campo" },
-                                { src: "/images/fotos-geo/Levantamientos/20250930_113303.jpg", alt: "Supervisión técnica de campo" }
+                                { src: "/FOTOS GEOBIOS/gestion/IMG_0320.jpeg", alt: "Equipo GEOBIOS en instalaciones" },
+                                { src: "/FOTOS GEOBIOS/gestion/IMG_0335.jpeg", alt: "Gestión ambiental en sitio" },
+                                { src: "/FOTOS GEOBIOS/gestion/IMG_2701.jpeg", alt: "Documentación ambiental" },
+                                { src: "/FOTOS GEOBIOS/gestion/IMG_3087.jpeg", alt: "Supervisión y gestión" },
+                                { src: "/FOTOS GEOBIOS/gestion/WhatsApp Image 2023-10-24 at 14.44.02 (1).jpeg", alt: "Trabajo de campo en gestión ambiental" }
                             ]}
                         />
                     </div>

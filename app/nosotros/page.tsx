@@ -8,24 +8,24 @@ import FadeIn from "../components/FadeIn";
 import styles from "./nosotros.module.css";
 
 const capacitacionesPhotos: { src: string; alt: string }[] = [
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240305_105244.jpg", alt: "Capacitación ambiental en campo" },
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240322_103232.jpg", alt: "Equipo GEOBIOS impartiendo capacitación" },
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240422_133705.jpg", alt: "Sesión de capacitación ambiental" },
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/TimePhoto_20251209_093112.jpg", alt: "Capacitación en normatividad ambiental" },
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/20251204_104829.jpg", alt: "Taller de formación ambiental" },
-    { src: "/images/fotos-geo/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG-20260220-WA0036.jpg", alt: "Capacitación a personal de proyecto" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240305_105244.jpg", alt: "Capacitación ambiental en campo" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240322_103232.jpg", alt: "Equipo GEOBIOS impartiendo capacitación" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG_20240422_133705.jpg", alt: "Sesión de capacitación ambiental" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/TimePhoto_20251209_093112.jpg", alt: "Capacitación en normatividad ambiental" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/20251204_104829.jpg", alt: "Taller de formación ambiental" },
+    { src: "/FOTOS GEOBIOS/FOTOS DE NOSOTROS DANDO CAPACITACIONES/IMG-20260220-WA0036.jpg", alt: "Capacitación a personal de proyecto" },
 ];
 
 const infraPhotos: { src: string; alt: string }[] = [
-    { src: "/images/fotos-geo/FOTOS CARROS/20251016_075218.jpg", alt: "Vehículos GEOBIOS para campo" },
-    { src: "/images/fotos-geo/FOTOS CARROS/IMG_20230907_114141.jpg", alt: "Camionetas de servicio ambiental" },
-    { src: "/images/fotos-geo/Salas de Juntas de reuniones Con Clientes/WhatsApp Image 2024-09-27 at 12.23.27 PM (2).jpeg", alt: "Sala de juntas y reuniones" },
-    { src: "/images/fotos-geo/FOTOS PAGINA SR LORENZO/IMG_0320.jpeg", alt: "Equipo técnico en instalaciones" },
-    { src: "/images/fotos-geo/Fotos Vuelos de Drone/WhatsApp Image 2024-09-27 at 12.00.44 PM.jpeg", alt: "Equipamiento de drones especializado" },
-    { src: "/images/fotos-geo/FOTOS CARROS/WhatsApp Image 2024-08-24 at 12.22.34 PM.jpeg", alt: "Logística y transporte" },
-    { src: "/images/fotos-geo/FOTOS PAGINA SR LORENZO/DSC_0060.JPG", alt: "Oficinas centrales GEOBIOS" },
-    { src: "/images/fotos-geo/Fotos Vuelos de Drone/dji_fly_20250925_102542_202_1758821172179_photo.jpg", alt: "Operación de vuelos de drone" },
-    { src: "/images/fotos-geo/FOTOS CARROS/20251016_075234.jpg", alt: "Flota de vehículos GEOBIOS" },
+    { src: "/FOTOS GEOBIOS/FOTOS CARROS/20251016_075218.jpg", alt: "Vehículos GEOBIOS para campo" },
+    { src: "/FOTOS GEOBIOS/FOTOS CARROS/IMG_20230907_114141.jpg", alt: "Camionetas de servicio ambiental" },
+    { src: "/FOTOS GEOBIOS/Salas de Juntas de reuniones Con Clientes/WhatsApp Image 2024-09-27 at 12.23.27 PM (2).jpeg", alt: "Sala de juntas y reuniones" },
+    { src: "/FOTOS GEOBIOS/FOTOS PAGINA SR LORENZO/gestión/IMG_0320.jpeg", alt: "Equipo técnico en instalaciones" },
+    { src: "/FOTOS GEOBIOS/Fotos Vuelos de Drone/WhatsApp Image 2024-09-27 at 12.00.44 PM.jpeg", alt: "Equipamiento de drones especializado" },
+    { src: "/FOTOS GEOBIOS/FOTOS CARROS/WhatsApp Image 2024-08-24 at 12.22.34 PM.jpeg", alt: "Logística y transporte" },
+    { src: "/FOTOS GEOBIOS/galería de imágenes/DSC_0060.JPG", alt: "Oficinas centrales GEOBIOS" },
+    { src: "/FOTOS GEOBIOS/supervisión_2/IMG_2931.jpeg", alt: "Operación de vuelos de drone" },
+    { src: "/FOTOS GEOBIOS/FOTOS CARROS/20251016_075234.jpg", alt: "Flota de vehículos GEOBIOS" },
 ];
 
 const team = [
@@ -35,7 +35,12 @@ const team = [
         description:
             "Geólogo especializado en materia ambiental y fundador de GEOBIOS. Con más de 20 años de experiencia en evaluación de impacto ambiental, supervisión de proyectos y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno. Lidera la dirección estratégica y técnica de la empresa con un enfoque multidisciplinario orientado al desarrollo sustentable.",
     },
-
+    {
+        name: "Lic. Joanna Sermeño Gochez",
+        role: "Subdirector General / Jurídico",
+        description:
+            "Licenciada en Derecho especializada en materia ambiental. Cuenta con amplia experiencia en asesoría jurídica, recursos administrativos y gestión de trámites ante autoridades ambientales de los distintos órdenes de gobierno. Brinda acompañamiento integral a sus clientes desde la obtención de autorizaciones hasta el cumplimiento de condicionantes, garantizando seguridad jurídica en cada etapa de sus proyectos.",
+    },
 ];
 
 const values = [

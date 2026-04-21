@@ -37,28 +37,28 @@ const categories = [
 ];
 
 const floraPhotos = [
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230703_061014.jpg", alt: "Rescate de flora en campo" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230703_105308.jpg", alt: "Identificación de especies vegetales" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20240122_134052.jpg", alt: "Reubicación de flora silvestre" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20240309_103640.jpg", alt: "Trabajo de campo rescate flora" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/IMG_20230724_121532.jpg", alt: "Documentación de especies rescatadas" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Flora/TimePhoto_20230704_150841.jpg", alt: "Proceso de rescate de vegetación" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/TimePhoto_20230703_061014.jpg", alt: "Rescate de flora en campo" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/TimePhoto_20230703_105308.jpg", alt: "Identificación de especies vegetales" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/IMG_20240122_134052.jpg", alt: "Reubicación de flora silvestre" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/IMG_20240309_103640.jpg", alt: "Trabajo de campo rescate flora" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/IMG_20230724_121532.jpg", alt: "Documentación de especies rescatadas" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Flora/TimePhoto_20230704_150841.jpg", alt: "Proceso de rescate de vegetación" },
 ];
 
 const faunaPhotos = [
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG_20210406_083134600.jpg", alt: "Rescate de fauna silvestre" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/Original_TimePhoto_20210407_100644.jpg", alt: "Manejo de fauna en campo" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG_20240311_105517.jpg", alt: "Reubicación de especies animales" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/TimePhoto_20230710_122357.jpg", alt: "Documentación de fauna rescatada" },
-    { src: "/images/fotos-geo/Rescate y Reubicacion de Fauna/IMG-20240615-WA0004.jpg", alt: "Liberación de fauna silvestre" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Fauna/IMG_20210406_083134600.jpg", alt: "Rescate de fauna silvestre" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Fauna/Original_TimePhoto_20210407_100644.jpg", alt: "Manejo de fauna en campo" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Fauna/IMG_20240311_105517.jpg", alt: "Reubicación de especies animales" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Fauna/TimePhoto_20230710_122357.jpg", alt: "Documentación de fauna rescatada" },
+    { src: "/FOTOS GEOBIOS/Rescate y Reubicacion de Fauna/IMG-20240615-WA0004.jpg", alt: "Liberación de fauna silvestre" },
 ];
 
 const levantamientosPhotos = [
-    { src: "/images/fotos-geo/Levantamientos/IMG_20220112_100949264_HDR.jpg", alt: "Levantamiento topográfico en campo" },
-    { src: "/images/fotos-geo/Levantamientos/IMG_20220112_120256557.jpg", alt: "Mediciones en sitio de proyecto" },
-    { src: "/images/fotos-geo/Levantamientos/IMG_20220210_112817534_HDR.jpg", alt: "Trabajo de levantamiento ambiental" },
-    { src: "/images/fotos-geo/Levantamientos/PXL_20220602_143130730.jpg", alt: "Equipo realizando levantamientos" },
-    { src: "/images/fotos-geo/Levantamientos/IMG_20231016_095559.jpg", alt: "Levantamiento de datos en campo" },
+    { src: "/FOTOS GEOBIOS/Levantamientos/IMG_20220112_100949264_HDR.jpg", alt: "Levantamiento topográfico en campo" },
+    { src: "/FOTOS GEOBIOS/Levantamientos/IMG_20220112_120256557.jpg", alt: "Mediciones en sitio de proyecto" },
+    { src: "/FOTOS GEOBIOS/Levantamientos/IMG_20220210_112817534_HDR.jpg", alt: "Trabajo de levantamiento ambiental" },
+    { src: "/FOTOS GEOBIOS/Levantamientos/PXL_20220602_143130730.jpg", alt: "Equipo realizando levantamientos" },
+    { src: "/FOTOS GEOBIOS/Levantamientos/IMG_20231016_095559.jpg", alt: "Levantamiento de datos en campo" },
 ];
 
 export default function EstudiosProgramas() {
