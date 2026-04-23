@@ -8,6 +8,7 @@ import { useState } from "react";
 import styles from "./contacto.module.css";
 
 export default function Contacto() {
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [formData, setFormData] = useState({
         nombre: "",
         email: "",
@@ -16,9 +17,41 @@ export default function Contacto() {
         mensaje: "",
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Gracias por su mensaje. Nos pondremos en contacto pronto.");
+        setStatus('loading');
+
+        try {
+            const response = await fetch('/send_email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                setStatus('success');
+                setFormData({
+                    nombre: "",
+                    email: "",
+                    telefono: "",
+                    servicio: "",
+                    mensaje: "",
+                });
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error("Error sending form:", error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -128,9 +161,33 @@ export default function Contacto() {
                                         />
                                     </div>
 
-                                    <button type="submit" className={`${styles.btnPrimary} cursor-pointer`}>
-                                        Enviar Mensaje
+                                    <button 
+                                        type="submit" 
+                                        className={`${styles.btnPrimary} cursor-pointer`}
+                                        disabled={status === 'loading'}
+                                    >
+                                        {status === 'loading' ? 'Enviando...' : 'Enviar Mensaje'}
                                     </button>
+
+                                    {status === 'success' && (
+                                        <motion.p 
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            style={{ color: '#10b981', fontWeight: 600, textAlign: 'center', marginTop: '0.5rem' }}
+                                        >
+                                            ✓ Mensaje enviado correctamente. Nos pondremos en contacto pronto.
+                                        </motion.p>
+                                    )}
+
+                                    {status === 'error' && (
+                                        <motion.p 
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            style={{ color: '#ef4444', fontWeight: 600, textAlign: 'center', marginTop: '0.5rem' }}
+                                        >
+                                            ✕ Error al enviar el mensaje. Por favor intente de nuevo o contáctenos por teléfono.
+                                        </motion.p>
+                                    )}
                                 </form>
                             </div>
                         </FadeIn>
@@ -182,13 +239,13 @@ export default function Contacto() {
                                                 Contacto de atención
                                             </p>
                                             <a
-                                                href="tel:+526121040049"
+                                                href="tel:+526121653962"
                                                 className={styles.contactLink}
                                             >
                                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                                                 </svg>
-                                                612 104 0049
+                                                612 16 539 62
                                             </a>
                                             <a
                                                 href="mailto:adriel.bareno@geobios.mx"
@@ -239,7 +296,7 @@ export default function Contacto() {
                                     </div>
                                     <div>
                                         <p className={styles.mapText} style={{ fontWeight: 600, color: 'var(--text-dark)' }}>🏙️ Representación Ciudad de México</p>
-                                        <p className={styles.mapText}>Avenida Porfirio Díaz, Colonia Del Valle, CDMX</p>
+                                        <p className={styles.mapText}>Avenida Porfirio Díaz, Colonia Del Valle, C. P. 03100, CDMX</p>
                                     </div>
                                 </div>
                             </div>

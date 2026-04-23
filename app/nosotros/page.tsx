@@ -33,7 +33,7 @@ const team = [
         name: "Geol. Lorenzo Javier López Vázquez",
         role: "Director General",
         description:
-            "Geólogo especializado en materia ambiental y fundador de GEOBIOS. Con más de 20 años de experiencia en evaluación de impacto ambiental, supervisión de proyectos y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno. Lidera la dirección estratégica y técnica de la empresa con un enfoque multidisciplinario orientado al desarrollo sustentable.",
+            "Geólogo especializado en materia ambiental y fundador de GEOBIOS. Con más de 25 años de experiencia en evaluación de impacto ambiental, supervisión de proyectos y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno. Lidera la dirección estratégica y técnica de la empresa con un enfoque multidisciplinario orientado al desarrollo sustentable.",
     },
     {
         name: "Lic. Joanna Sermeño Gochez",
@@ -102,10 +102,14 @@ export default function Nosotros() {
                             />
                             <div className={styles.textBlock}>
                                 <p style={{ textAlign: 'justify' }}>
-                                    Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000 con más de 20 años de experiencia en evaluación de impacto ambiental, gestión de trámites y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno.
+                                    Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000 con más de 25 años de experiencia en evaluación de impacto ambiental, gestión de trámites y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno.
                                 </p>
                                 <p style={{ textAlign: 'justify' }}>
-                                    Somos una plataforma de servicios técnicos, científicos y jurídicos especializados en materia ambiental. Trabajamos tanto como empresa líder que coordina y entrega proyectos de forma integral, como equipo de respaldo local para desarrolladoras, despachos y empresas externas que deseen operar en Baja California Sur, aportando cobertura operativa en campo, conocimiento del territorio y presencia directa ante las autoridades reguladoras competentes.
+                                    Somos una plataforma de servicios técnicos, científicos y jurídicos especializados en materia ambiental. Operamos en dos modalidades:
+                                    <br /><br />
+                                    • Como empresa líder: coordinamos y entregamos proyectos de forma integral, asumiendo la dirección técnica y la responsabilidad total del proceso.
+                                    <br /><br />
+                                    • Como equipo de apoyo local: respaldamos a desarrolladoras, despachos y empresas externas que deseen operar en Baja California Sur, aportando cobertura operativa en campo, conocimiento del territorio y presencia directa ante las autoridades reguladoras competentes.
                                 </p>
                             </div>
                         </FadeIn>

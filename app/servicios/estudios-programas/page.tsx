@@ -120,8 +120,8 @@ export default function EstudiosProgramas() {
                     <FadeIn direction="up">
                         <div className={styles.carouselSection}>
                             <ImageCarousel
-                                title="Levantamientos de Campo"
-                                description="Registro de nuestros levantamientos topográficos y ambientales en diferentes proyectos."
+                                title="GESTIÓN AMBIENTAL"
+                                description="Organizamos las actividades, políticas y recursos de manera colaborativa para alcanzar el cumplimiento normativo en materia ambiental"
                                 images={levantamientosPhotos}
                             />
                         </div>

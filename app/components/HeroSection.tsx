@@ -43,8 +43,9 @@ export default function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className={styles.description}
+                            style={{ textAlign: 'justify' }}
                         >
-                            Más de 20 años de experiencia en estudios ambientales, gestión
+                            Más de 25 años de experiencia en estudios ambientales, gestión
                             de trámites, supervisión de proyectos y cumplimiento normativo
                             en materia ambiental. Lideramos su proyecto o nos integramos a
                             él. Experiencia local, soluciones a su medida.

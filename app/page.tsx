@@ -57,7 +57,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "+20", label: "Años de experiencia" },
+  { value: "+25", label: "Años de experiencia" },
   { value: "+500", label: "Proyectos realizados" },
   { value: "+100", label: "Clientes satisfechos" },
   { value: "4", label: "Áreas de especialidad" },
@@ -101,18 +101,14 @@ export default function Home() {
                 centered={false}
               />
               <p className={`${styles.textMedium} ${styles.mb6}`} style={{ textAlign: 'justify' }}>
-                Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000
-                con más de 20 años de experiencia en evaluación de impacto ambiental,
-                gestión de trámites y cumplimiento normativo ante autoridades ambientales
-                de los distintos órdenes de gobierno.
+                Consultoría Ambiental GEOBIOS es una empresa fundada en el año 2000 con más de 25 años de experiencia en evaluación de impacto ambiental, gestión de trámites y cumplimiento normativo ante autoridades ambientales de los distintos órdenes de gobierno.
               </p>
               <p className={`${styles.textMedium} ${styles.mb8}`} style={{ textAlign: 'justify' }}>
-                Somos una plataforma de servicios técnicos, científicos y jurídicos
-                especializados en materia ambiental. Trabajamos tanto como empresa líder
-                que coordina y entrega proyectos de forma integral, como equipo de respaldo
-                local para desarrolladoras, despachos y empresas externas que deseen operar
-                en Baja California Sur, aportando cobertura operativa en campo, conocimiento
-                del territorio y presencia directa ante las autoridades reguladoras competentes.
+                Somos una plataforma de servicios técnicos, científicos y jurídicos especializados en materia ambiental. Operamos en dos modalidades:
+                <br /><br />
+                • Como empresa líder: coordinamos y entregamos proyectos de forma integral, asumiendo la dirección técnica y la responsabilidad total del proceso.
+                <br /><br />
+                • Como equipo de apoyo local: respaldamos a desarrolladoras, despachos y empresas externas que deseen operar en Baja California Sur, aportando cobertura operativa en campo, conocimiento del territorio y presencia directa ante las autoridades reguladoras competentes.
               </p>
               <a href="/nosotros" className={styles.btnPrimary}>
                 Conocer nuestra historia

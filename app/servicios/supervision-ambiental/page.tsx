@@ -41,16 +41,11 @@ const services = [
 
 const supervisionPhotos = [
     { src: "/FOTOS GEOBIOS/supervisión_2/20260302_105955.jpg", alt: "Supervisión ambiental en sitio 1" },
-    { src: "/FOTOS GEOBIOS/supervisión_2/IMG_2931.jpeg", alt: "Supervisión ambiental en sitio 2" },
-    { src: "/FOTOS GEOBIOS/supervisión_2/IMG_5659.jpeg", alt: "Supervisión ambiental en sitio 3" },
     { src: "/FOTOS GEOBIOS/supervisión_2/IMG_5826.JPG", alt: "Supervisión ambiental en sitio 4" },
-    { src: "/FOTOS GEOBIOS/supervisión_2/IMG_6298.JPG", alt: "Supervisión ambiental en sitio 5" },
     { src: "/FOTOS GEOBIOS/supervisión_2/IMG_6912 2.JPG", alt: "Supervisión ambiental en sitio 6" },
     { src: "/FOTOS GEOBIOS/supervisión_2/IMG_8138.jpeg", alt: "Supervisión ambiental en sitio 7" },
     { src: "/FOTOS GEOBIOS/supervisión_2/WhatsApp Image 2025-04-24 at 13.41.21.jpeg", alt: "Supervisión ambiental en sitio 8" },
-    { src: "/FOTOS GEOBIOS/Supervision Ambiental RSL- GRANJAS-EOLICA/IMG_20240425_141042.jpg", alt: "Monitoreo ambiental de proyecto eólico" },
     { src: "/FOTOS GEOBIOS/Supervision Ambiental RSL- GRANJAS-EOLICA/IMG_20250129_141420200_HDR.jpg", alt: "Inspección ambiental en sitio" },
-    { src: "/FOTOS GEOBIOS/Supervision Ambiental RSL- GRANJAS-EOLICA/WhatsApp Image 2024-09-27 at 12.23.27 PM (1).jpeg", alt: "Equipo de supervisión en proyecto" },
 ];
 
 export default function SupervisionAmbiental() {

@@ -26,7 +26,7 @@ export default function Footer() {
                             />
                         </div>
                         <p className={styles.description}>
-                            Consultoría Ambiental con más de 20 años de experiencia en
+                            Consultoría Ambiental con más de 25 años de experiencia en
                             gestión, supervisión y estudios ambientales. Comprometidos con el
                             desarrollo sustentable.
                         </p>
@@ -99,10 +99,10 @@ export default function Footer() {
                                     Contacto de atención
                                 </p>
                                 <a
-                                    href="tel:+526121040049"
+                                    href="tel:+526121653962"
                                     className={styles.contactPhone}
                                 >
-                                    612 104 0049
+                                    612 16 539 62
                                 </a>
                                 <a
                                     href="mailto:adriel.bareno@geobios.mx"

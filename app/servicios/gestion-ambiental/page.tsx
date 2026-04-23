@@ -96,8 +96,8 @@ export default function GestionAmbiental() {
                     </div>
                     <div className={styles.carouselSection}>
                         <ImageCarousel
-                            title="Desarrollo de Levantamientos en Campo"
-                            description="Realizamos levantamientos técnicos con precisión para el desarrollo de estudios ambientales de alta calidad."
+                            title="GESTIÓN AMBIENTAL"
+                            description="Organizamos las actividades, políticas y recursos de manera colaborativa para alcanzar el cumplimiento normativo en materia ambiental"
                             images={[
                                 { src: "/FOTOS GEOBIOS/gestion/IMG_0320.jpeg", alt: "Equipo GEOBIOS en instalaciones" },
                                 { src: "/FOTOS GEOBIOS/gestion/IMG_0335.jpeg", alt: "Gestión ambiental en sitio" },

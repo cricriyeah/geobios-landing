@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "GEOBIOS — Consultoría Ambiental",
   description:
-    "Especialistas en consultoría ambiental, gestión ambiental, supervisión, estudios científicos y asesoría jurídica ambiental. Más de 20 años de experiencia.",
+    "Especialistas en consultoría ambiental, gestión ambiental, supervisión, estudios científicos y asesoría jurídica ambiental. Más de 25 años de experiencia.",
   keywords:
     "consultoría ambiental, gestión ambiental, estudios ambientales, supervisión ambiental, asesoría jurídica ambiental, GEOBIOS",
 };
